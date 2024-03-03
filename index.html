@@ -180,7 +180,7 @@ document.getElementById("defaultOpen").click();
         <p>Ready to start your construction project with AP Home Services? Contact us for a personalized consultation and a free quote.</p>
         <button onclick="toggleContactForm()">Get a Free Quote</button>
         
-        <form id="contactForm" onsubmit="sendEmail(); submitContactForm(); reset(); return false;">
+        <form id="contactForm" onsubmit="sendEmail(); submitContactForm();reset(); return false;" >
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required>
 
@@ -230,23 +230,26 @@ document.getElementById("defaultOpen").click();
             document.getElementById('successMessage').style.display = 'block';
             return false; // Prevent the form from actually submitting in this example
         }
-	    function sendEmail(){
+			
+		function sendEmail(){
 		
 						Email.send({
 				SecureToken : "8e853d1f-5ff3-489b-b96d-76aa9be44712",
-				To : 'info@aphomesvc.com',
+				To : 'amigovich2020@gmail.com',
 				From : document.getElementById("email").value,
 				Subject : "New Contact Form Enguiry",
-			        Body : "Name" + document.getElementById("name").value
+			Body : "Name" + document.getElementById("name").value
 				+ "<br> Email: " + document.getElementById("email").value
 				+ "<br> Phone no: " + document.getElementById("phone").value
 				+ "<br> Address: " + document.getElementById("address").value
-
+				+ "<br> Services: " + document.getElementById("services").value
+				+ "<br> Comments: " + document.getElementById("comments").value
 				
 				}).then(
-			  message => alert(message)
+			  message => alert("Message Sent Succesfully")
 			);
 		}
+	
     </script>
 	
 	    <!-- Footer -->
