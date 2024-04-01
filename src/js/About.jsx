@@ -9,16 +9,16 @@ function About() {
       <Container>
         <h2 className="text-center">About Us</h2>
         <Row>
-          <Col xs={12} md={4}>
-            <img />
-          </Col>
           <Col className="about-container" xs={8} md={12}>
             <p className="p1">
               Welcome to AP Home Services, your trusted partner in construction and home improvement. With a commitment to excellence and a focus on customer satisfaction, we bring your vision to life. Our dedicated team of professionals is here to make your dream home a reality.
             </p>
+            <p className="p2">
+              We are located in the Twin Cities area, serving the metro with dedication.
+            </p>
           </Col>
           <Col xs={12} md={4}>
-            <img />
+            <img src="your-image-path" alt="Project images" />
           </Col>
         </Row>
       </Container>

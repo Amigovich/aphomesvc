@@ -8,10 +8,10 @@ function Footer() {
         <Navbar>
         <Nav className="mr-auto">
             <Nav.Link href="https://github.com/dmtweedy" target="_blank" rel="noopener noreferrer">
-            Phone
+            Phone: 952-212-7499
             </Nav.Link>
             <Nav.Link href="https://www.linkedin.com/in/damon-tweedy-296737291/" target="_blank" rel="noopener noreferrer">
-            Email
+            Email: info@aphomesvc.com
             </Nav.Link>
         </Nav>
         <Navbar.Text>&copy; {new Date().getFullYear()} AP Home Services. All rights reserved.</Navbar.Text>
