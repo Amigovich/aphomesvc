@@ -4,15 +4,18 @@ import { Container, Card, Row, Col } from 'react-bootstrap';
 const Services = () => {
   // Sample data for services
   const services = [
-    { id: 1, title: 'Kitchen Remodeling', description: 'Upgrade your kitchen with our remodeling services.' },
-    { id: 2, title: 'Bathroom Renovation', description: 'Transform your bathroom into a luxurious space.' },
-    { id: 3, title: 'Flooring Installation', description: 'Install high-quality flooring for your home.' },
-    { id: 4, title: 'Painting Services', description: 'Refresh your home with professional painting services.' },
+    { id: 1, title: 'Roofing', description: 'We offer professional roofing services to protect your home from the elements.' },
+    { id: 2, title: 'Siding', description: 'Enhance the appearance and durability of your home with our siding solutions.' },
+    { id: 4, title: 'Gutters', description: 'Keep your home safe from water damage with our gutter installation and repair services.' },
+    { id: 5, title: 'General Contracting', description: 'Get comprehensive construction services for your home projects.' },
+    { id: 6, title: 'Replacement Windows', description: 'Upgrade your home with energy-efficient replacement windows.' },
+    { id: 7, title: 'Replacement Doors', description: 'Enhance the security and style of your home with replacement doors.' },
   ];
 
   return (
     <Container className="mt-5">
-      <h1>Our Services</h1>
+      <h2>Our Services</h2>
+      <p>We offer a range of construction services, including roofing, siding, windows, gutters, general contracting. Our skilled team is committed to delivering top-notch craftsmanship and exceeding customer expectations. Your home is our priority, and we take pride in making your construction experience seamless and enjoyable.</p>
       <Row>
         {services.map((service) => (
           <Col key={service.id} md={6} lg={4} className="mb-3">

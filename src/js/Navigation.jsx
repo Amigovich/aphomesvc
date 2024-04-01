@@ -27,11 +27,6 @@ function Navigation({ onItemClick }) {
         </Link>
         </Nav.Item>
         <Nav.Item>
-        <Link to="/contact" className="nav-link" onClick={handleItemClick}>
-            Contact
-        </Link>
-        </Nav.Item>
-        <Nav.Item>
         <Link to="/estimate" className="nav-link" onClick={handleItemClick}>
             Get A Free Quote
         </Link>

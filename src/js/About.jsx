@@ -7,22 +7,18 @@ function About() {
   return (
     <section id="about" className="about-content">
       <Container>
-        <h2 className="text-center">About Me</h2>
+        <h2 className="text-center">About Us</h2>
         <Row>
           <Col xs={12} md={4}>
-          <img />
+            <img />
           </Col>
-          <Col className="about-container" xs={12} md={4}>
+          <Col className="about-container" xs={8} md={12}>
             <p className="p1">
-              Hello World</p>
-            <p className="p2">
-              What excites me most about tech?</p>
-            <p className="p3">
-              Everything <a href="" target="_blank" rel="noopener noreferrer">here</a>.
+              Welcome to AP Home Services, your trusted partner in construction and home improvement. With a commitment to excellence and a focus on customer satisfaction, we bring your vision to life. Our dedicated team of professionals is here to make your dream home a reality.
             </p>
           </Col>
           <Col xs={12} md={4}>
-          <img />
+            <img />
           </Col>
         </Row>
       </Container>
