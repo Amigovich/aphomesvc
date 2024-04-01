@@ -1,102 +1,14 @@
 <!DOCTYPE html>
-<html lang="en"><head>
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AP Home Services - Your Trusted Partner in Home Improvement</title>
-    <link rel="stylesheet" href="src/style.css">
-</head>
-
-<body>
-    
-<div id="Home" class="tabcontent" style="display: none;">
-    <h1>AP Home Services</h1>
-    <p>Your Trusted Partner in Home Improvement.</p>
-</div>
-
-<div id="Services" class="tabcontent" style="display: block;">
-    <h1>Services</h1>
-    <p>Windows and Doors</p> 
-    <p>Other Services</p> 
-</div>
-
-<div id="Location" class="tabcontent" style="display: none;">
-    <h1>Location</h1>
-    <p>Twin Cities Area.</p>
-</div>
-
-<div id="Contact" class="tabcontent" style="display: none;">
-    <h1>Our Contact Info</h1>
-    <p>Phone: 952-212-7499</p>
-    <p>Email: info@aphomesvc.com</p>
-</div>
-
-<button class="tablink" onclick="openCity('Home', this, '#4682B4')" id="defaultOpen" style="">Home</button>
-<button class="tablink" onclick="openCity('Services', this, '#e87a5d')" style="background-color: rgb(232, 122, 93);">Services</button>
-<button class="tablink" onclick="openCity('Location', this, '#f3b941')" style="">Location</button>
-<button class="tablink" onclick="openCity('Contact', this, '#708090')" style="">Contact</button>
-
-<section>
-    <h2>About Us</h2>
-    <p>Welcome to AP Home Services, your trusted partner in 
-    construction and home improvement. With a commitment to excellence and a
-    focus on customer satisfaction, we bring your vision to life. Our 
-    dedicated team of professionals is here to make your dream home a 
-    reality.</p>
-</section>
-
-<section>
-    <h2>Our Services</h2>
-    <p>We offer a range of construction services, including  replacement windows, replacement doors. Our skilled team is 
-    committed to delivering top-notch craftsmanship and exceeding customer 
-    expectations. Your home is our priority, and we take pride in making 
-    your construction experience seamless and enjoyable.</p>
-</section>
-
-<section>
-    <h2>Contact Us</h2>
-    <p>Ready to start your construction project with AP Home Services? Contact us for a personalized consultation and a free quote.</p>
-    <button onclick="toggleContactForm()">Get a Free Quote</button>
-        
-    <form id="contactForm" onsubmit="sendEmail(); submitContactForm();reset(); return false;">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required="">
-
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required="">
-
-        <label for="phone">Phone:</label>
-        <input type="text" id="phone" name="phone" required="">
-
-        <label for="address">Address:</label>
-        <input type="text" id="address" name="address" required="">
-
-        <label for="services">Services Requested:</label>
-        <select id="services" name="services" required="">
-            <option value="windows" selected="selected">Windows</option>
-			<option value="door">Doors</option>
-                
-        </select>
-
-        <label for="additionalServices">Additional Services:</label>
-        <!-- Add your additional services checkboxes here -->
-
-        <label for="comments">Comments:</label>
-        <textarea id="comments" name="comments" rows="4"></textarea>
-
-        <button type="submit">Submit</button>
-    </form>
-
-    <div id="successMessage">Thank you! We’ll get back to you within 24 hours.</div>
-</section>
-
-	<!-- Footer -->
-<footer style="background-color: #34495e; color: #e74c3c; text-align: center; padding: 10px;">
-    <p><span class="contact-info">Phone: 952-212-7499 | Email: info@aphomesvc.com</span></p>
-    © 2024 AP Home Services. All Rights Reserved.
-</footer>
-
-	<script src="AP%20Home%20Services%20-%20Construction%20Company_files/smtp.js"></script>
-    <script src="src/js/script.js"></script>
-
-</body></html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" sizes="60x60" href="/favicon.ico" />
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AP Home Services</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
