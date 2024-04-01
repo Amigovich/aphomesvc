@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import Navigation from './Navigation';
 import Navbar from 'react-bootstrap/Navbar';
 
@@ -12,7 +13,7 @@ function Header() {
   return (
     <header className="header">
       <Navbar bg="green" expand="lg" expanded={expanded}>
-        <Navbar.Brand href="/">AP Home Services</Navbar.Brand>
+        <Navbar.Brand as={Link} to="/about">AP Home Services</Navbar.Brand>
         <Navbar.Toggle
           style={{ backgroundColor: 'green' }}
           aria-controls="basic-navbar-nav"
