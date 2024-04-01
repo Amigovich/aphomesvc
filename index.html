@@ -4,142 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AP Home Services - Your Trusted Partner in Home Improvement</title>
-
-<style>
-body {
-    font-family: "Lato", sans-serif;
-}
-
-.tablink {
-    background-color: #ccd5db; /* Lighter blue */
-    color: #000; /* Black text color */
-    float: left;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    padding: 14px 16px;
-    font-size: 17px;
-    width: 25%;
-}
-
-.tablink:hover {
-    background-color: #a5b3bf; /* Darker blue on hover */
-}
-
-/* Style the tab content */
-.tabcontent {
-    color: #000; /* Black text color */
-    display: none;
-    padding: 50px;
-    text-align: center;
-}
-
-#Home {background-color: #ccd5db;} /* Lighter blue */
-#Services {background-color: #e6b9a8;} /* Lighter orange */
-#Location {background-color: #f7d8a2;} /* Lighter yellow */
-#Contact {background-color: #9daeb6;} /* Lighter gray */
-
-
-/* Add your styles for the header and services here */
-header {
-    background-color: #556877; /* Darker gray */
-    color: #fff; /* White text color */
-    padding: 45px;
-    text-align: center;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-section {
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    padding: 1em;
-    margin: 2em auto;
-    max-width: 800px;
-}
-
-h1 {
-    color: #e74c3c; /* Lighter red */
-}
-
-h2 {
-    color: #34495e;
-}
-
-button, button:hover {
-    background-color: #34495e; /* Darker blue */
-    color: #fff; /* White text color */
-    padding: 0.5em 1em;
-    border: none;
-    cursor: pointer;
-}
-
-/* Your existing styles */
-#successMessage {
-    display: none;
-    color: #e74c3c; /* Lighter red */
-    font-size: 1.5em; /* Larger font size */
-    margin-top: 1em;
-}
-
-/* Style to put labels and inputs in line */
-form {
-    display: none; /* Hide the form by default */
-}
-
-form label {
-    display: block;
-    font-size: 1.2em; /* Bigger font size */
-    margin-bottom: 5px; /* Add more space between labels and inputs */
-}
-
-form input,
-form select,
-form textarea {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    box-sizing: border-box;
-    font-size: 1.2em; /* Bigger font size */
-}
-
-form button {
-    display: inline-block;
-    width: auto;
-    padding: 15px; /* Increase button padding */
-    margin-top: 10px;
-    cursor: pointer;
-    font-size: 1.2em; /* Bigger font size */
-}
-</style>
-
-
+    <link rel="stylesheet" href="src/style.css">
 </head>
+
 <body>
     
 <div id="Home" class="tabcontent" style="display: none;">
-  <h1>AP Home Services</h1>
+    <h1>AP Home Services</h1>
     <p>Your Trusted Partner in Home Improvement.</p>
 </div>
 
 <div id="Services" class="tabcontent" style="display: block;">
-  <h1>Services</h1>
-  <p>Windows and Doors</p> 
-  <p>Other Services</p> 
+    <h1>Services</h1>
+    <p>Windows and Doors</p> 
+    <p>Other Services</p> 
 </div>
 
 <div id="Location" class="tabcontent" style="display: none;">
-  <h1>Location</h1>
-  <p>Twin Cities Area.</p>
+    <h1>Location</h1>
+    <p>Twin Cities Area.</p>
 </div>
 
 <div id="Contact" class="tabcontent" style="display: none;">
-  <h1>Our Contact Info</h1>
-  <p>Phone: 952-212-7499</p>
-  <p>Email: info@aphomesvc.com</p>
+    <h1>Our Contact Info</h1>
+    <p>Phone: 952-212-7499</p>
+    <p>Email: info@aphomesvc.com</p>
 </div>
 
 <button class="tablink" onclick="openCity('Home', this, '#4682B4')" id="defaultOpen" style="">Home</button>
@@ -147,131 +36,67 @@ form button {
 <button class="tablink" onclick="openCity('Location', this, '#f3b941')" style="">Location</button>
 <button class="tablink" onclick="openCity('Contact', this, '#708090')" style="">Contact</button>
 
-<script>
-function openCity(cityName,elmnt,color) {
-  var i, tabcontent, tablinks;
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
-  tablinks = document.getElementsByClassName("tablink");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].style.backgroundColor = "";
-  }
-  document.getElementById(cityName).style.display = "block";
-  elmnt.style.backgroundColor = color;
+<section>
+    <h2>About Us</h2>
+    <p>Welcome to AP Home Services, your trusted partner in 
+    construction and home improvement. With a commitment to excellence and a
+    focus on customer satisfaction, we bring your vision to life. Our 
+    dedicated team of professionals is here to make your dream home a 
+    reality.</p>
+</section>
 
-}
-// Get the element with id="defaultOpen" and click on it
-document.getElementById("defaultOpen").click();
-</script>
-    
+<section>
+    <h2>Our Services</h2>
+    <p>We offer a range of construction services, including  replacement windows, replacement doors. Our skilled team is 
+    committed to delivering top-notch craftsmanship and exceeding customer 
+    expectations. Your home is our priority, and we take pride in making 
+    your construction experience seamless and enjoyable.</p>
+</section>
 
-    <section>
-        <h2>About Us</h2>
-        <p>Welcome to AP Home Services, your trusted partner in 
-construction and home improvement. With a commitment to excellence and a
- focus on customer satisfaction, we bring your vision to life. Our 
-dedicated team of professionals is here to make your dream home a 
-reality.</p>
-    </section>
-
-    <section>
-        <h2>Our Services</h2>
-        <p>We offer a range of construction services, including  replacement windows, replacement doors. Our skilled team is 
-committed to delivering top-notch craftsmanship and exceeding customer 
-expectations. Your home is our priority, and we take pride in making 
-your construction experience seamless and enjoyable.</p>
-    </section>
-
-    <section>
-        <h2>Contact Us</h2>
-        <p>Ready to start your construction project with AP Home Services? Contact us for a personalized consultation and a free quote.</p>
-        <button onclick="toggleContactForm()">Get a Free Quote</button>
+<section>
+    <h2>Contact Us</h2>
+    <p>Ready to start your construction project with AP Home Services? Contact us for a personalized consultation and a free quote.</p>
+    <button onclick="toggleContactForm()">Get a Free Quote</button>
         
-        <form id="contactForm" onsubmit="sendEmail(); submitContactForm();reset(); return false;">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required="">
+    <form id="contactForm" onsubmit="sendEmail(); submitContactForm();reset(); return false;">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required="">
 
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required="">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required="">
 
-            <label for="phone">Phone:</label>
-            <input type="text" id="phone" name="phone" required="">
+        <label for="phone">Phone:</label>
+        <input type="text" id="phone" name="phone" required="">
 
-            <label for="address">Address:</label>
-            <input type="text" id="address" name="address" required="">
+        <label for="address">Address:</label>
+        <input type="text" id="address" name="address" required="">
 
-            <label for="services">Services Requested:</label>
-            <select id="services" name="services" required="">
-                <option value="windows" selected="selected">Windows</option>
-				<option value="door">Doors</option>
+        <label for="services">Services Requested:</label>
+        <select id="services" name="services" required="">
+            <option value="windows" selected="selected">Windows</option>
+			<option value="door">Doors</option>
                 
-            </select>
+        </select>
 
-            <label for="additionalServices">Additional Services:</label>
-            <!-- Add your additional services checkboxes here -->
+        <label for="additionalServices">Additional Services:</label>
+        <!-- Add your additional services checkboxes here -->
 
-            <label for="comments">Comments:</label>
-            <textarea id="comments" name="comments" rows="4"></textarea>
+        <label for="comments">Comments:</label>
+        <textarea id="comments" name="comments" rows="4"></textarea>
 
-            <button type="submit">Submit</button>
-        </form>
+        <button type="submit">Submit</button>
+    </form>
 
-        <div id="successMessage">Thank you! We’ll get back to you within 24 hours.</div>
-    </section>
+    <div id="successMessage">Thank you! We’ll get back to you within 24 hours.</div>
+</section>
 
-    <script>
-        function toggleContactForm() {
-            var contactForm = document.getElementById('contactForm');
-            if (contactForm.style.display === 'none' || contactForm.style.display === '') {
-                contactForm.style.display = 'block';
-            } else {
-                contactForm.style.display = 'none';
-            }
-        }
-
-        function submitContactForm() {
-            // Add your form submission logic here
-            // For now, just show the success message
-            document.getElementById('contactForm').style.display = 'none';
-            document.getElementById('successMessage').style.display = 'block';
-            return false; // Prevent the form from actually submitting in this example
-        }
-			
-		function sendEmail(){
-		
-						Email.send({
-				SecureToken : "90152e3f-5d81-4474-b434-e3df76a51bee",
-				To : 'info@aphomesvc.com',
-				From : document.getElementById("email").value,
-				Subject : "New Contact Form Enguiry",
-			Body : "Name" + document.getElementById("name").value
-				+ "<br> Email: " + document.getElementById("email").value
-				+ "<br> Phone no: " + document.getElementById("phone").value
-				+ "<br> Address: " + document.getElementById("address").value
-				+ "<br> Services: " + document.getElementById("services").value
-				+ "<br> Comments: " + document.getElementById("comments").value
-				
-				}).then(
-			  message => alert("Message Sent Succesfully")
-			);
-		}
-	
-    </script>
-	
-	    <!-- Footer -->
+	<!-- Footer -->
 <footer style="background-color: #34495e; color: #e74c3c; text-align: center; padding: 10px;">
     <p><span class="contact-info">Phone: 952-212-7499 | Email: info@aphomesvc.com</span></p>
     © 2024 AP Home Services. All Rights Reserved.
 </footer>
 
-<style>
-    .contact-info {
-        color: white; /* Use the color of your company name */
-    }
-</style>
 	<script src="AP%20Home%20Services%20-%20Construction%20Company_files/smtp.js"></script>
-
+    <script src="src/js/script.js"></script>
 
 </body></html>
