@@ -56,7 +56,7 @@ function Estimate() {
     return (
         <section id="estimate" className="content">
             <h2>Contact Us</h2>
-            <p>Ready to start your construction project with AP Home Services? Contact us for a personalized consultation and a free quote today.</p>
+            <p>Ready to start your construction project with AP Home Services? Interested in financing a project? Contact us for a personalized consultation and a free quote today.</p>
             <Form id="contactForm" onSubmit={handleSubmit}>
                 <Form.Group controlId="name">
                     <Form.Label>Name:</Form.Label>

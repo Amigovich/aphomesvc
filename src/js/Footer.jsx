@@ -7,10 +7,10 @@ function Footer() {
     <footer className="footer">
         <Navbar>
         <Nav className="mr-auto">
-            <Nav.Link href="https://github.com/dmtweedy" target="_blank" rel="noopener noreferrer">
+            <Nav.Link href="/" target="_blank" rel="noopener noreferrer">
             Phone: 952-212-7499
             </Nav.Link>
-            <Nav.Link href="https://www.linkedin.com/in/damon-tweedy-296737291/" target="_blank" rel="noopener noreferrer">
+            <Nav.Link href="/" target="_blank" rel="noopener noreferrer">
             Email: info@aphomesvc.com
             </Nav.Link>
         </Nav>
