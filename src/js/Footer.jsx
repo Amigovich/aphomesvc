@@ -14,7 +14,7 @@ function Footer() {
             Email: info@aphomesvc.com
             </Nav.Link>
         </Nav>
-        <Navbar.Text>&copy; {new Date().getFullYear()} AP Home Services. All rights reserved.</Navbar.Text>
+        <Navbar.Text className="ml-auto">&copy; {new Date().getFullYear()} AP Home Services. All rights reserved.</Navbar.Text>
         </Navbar>
     </footer>
     );

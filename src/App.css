@@ -1,120 +1,193 @@
 /* Global styles */
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.container-fluid {
+  min-height: 100vh;
+}
+
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
+  font-family: 'Cuprum', sans-serif; /* Primary typography */
+  background-color: #ffffff; /* Background color */
+  color: #2a2c35; /* Primary text color */
+}
+
+h1, h2, h3, h4, h5, h6, a {
+  /* Apply font styles for headings */
+  font-family: 'Cuprum', sans-serif;
+}
+
+h2 {
+  margin-top: 15px;
+  margin-bottom: 30px;
+  font-weight: bold;
+  color: #555; /* Secondary text color */
+}
+
+p {
+  color: #555; /* Secondary text color */
+  font-family: 'Cuprum', sans-serif;
+}
+
+/* Header styles */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #2a2c35; /* Primary color */
+  color: #ffffff; /* Text color */
+  padding: 0 !important;
+}
+
+.header .navbar-nav {
+  display: flex;
+  justify-content: space-between;
+  width: 100%; 
+  margin-right: 40px;
+}
+
+.header .nav-link {
+  width: 240%;
+  font-size: 26px; 
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-right: 60px;
+}
+
+.header .navbar {
+  padding: 0;
+}
+
+.header .navbar-brand {
+  padding: 1px;
+  margin-right: 8%;
+}
+
+.header .nav-link:hover {
+  color: #8c8c8c; /* Accent color */
+}
+
+@media (max-width: 1074px) {
+  /* Apply styles for screens smaller than 768px */
+  .navbar-toggler {
+    display: block;
   }
-  
-  h2 {
-    margin-top: 15px;
-    margin-bottom: 30px;
-    font-weight: bold;
-    color: #555;
+
+  .navbar-collapse {
+    display: none;
   }
-  
-  p {
-    color: #555;
+
+  .navbar-collapse.show {
+    display: block;
   }
-  
-  /* Header styles */
-  .header {
-    background-color: #444;
-    color: #fff;
-    padding: 15px 0;
-  }
-  
-  .header .navbar-nav {
-    margin-left: auto;
-    margin-right: 20px;
-  }
-  
-  .header .nav-link {
-    color: #fff;
-    margin-left: 15px;
-  }
-  
-  .header .nav-link:hover {
-    color: #ddd;
-  }
-  
-  /* Footer styles */
-  .footer {
-    background-color: #222;
-    color: #ddd;
-    padding: 20px 0;
-    text-align: center;
-  }
-  
-  .footer .nav-link {
-    color: #ddd;
-    margin: 0 10px;
-  }
-  
-  .footer .nav-link:hover {
-    color: #bbb;
-  }
-  
-  /* Content styles */
-  .content {
-    padding: 50px;
-  }
-  
-  /* Button styles */
-  .btn-primary {
-    background-color: #337ab7;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-  }
-  
-  .btn-primary:hover {
-    background-color: #23527c;
-  }
-  
-  .btn-secondary {
-    background-color: #5bc0de;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-  }
-  
-  .btn-secondary:hover {
-    background-color: #2aabd2;
-  }
-  
-  /* Form styles */
-  .form-group {
-    margin-bottom: 20px;
-  }
-  
-  .form-control {
-    width: 100%;
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-  }
-  
-  .form-control:focus {
-    outline: none;
-    border-color: #5bc0de;
-  }
-  
-  /* Card styles */
-  .card {
-    background-color: #fff;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    margin-bottom: 20px;
-  }
-  
-  .card-title {
-    font-weight: bold;
-    color: #333;
-  }
-  
-  .card-text {
-    color: #555;
-  }
+}
+
+/* Footer styles */
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #2a2c35; /* Primary color */
+  color: #ffffff; /* Text color */
+  font-size: 18px;
+}
+
+.footer .ml-auto {
+  margin-left: auto !important;
+  margin-right: 1%;
+  display: flex;
+  align-items: center;
+}
+
+.footer .nav-link:hover {
+  color: #8c8c8c; /* Accent color */
+}
+
+/* Content styles */
+.content {
+  padding: 50px;
+}
+
+/* Button styles */
+.btn-primary {
+  background-color: #2a2c35; /* Primary color */
+  color: #ffffff; /* Text color */
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background-color: #8c8c8c; /* Accent color */
+}
+
+.btn-secondary {
+  background-color: #2a2c35; /* Primary color */
+  color: #ffffff; /* Text color */
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.btn-secondary:hover {
+  background-color: #8c8c8c; /* Accent color */
+}
+
+/* Form styles */
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-control {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: #8c8c8c; /* Accent color */
+}
+
+/* Card styles */
+.card {
+  background-color: #ffffff; /* Background color */
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.card-title {
+  font-weight: bold;
+  color: #333; /* Text color */
+}
+
+.card-text {
+  color: #555; /* Secondary text color */
+}
+
+/* About Styles */
+
+.about-content h1 {
+  margin-top: 60px; /* Adjust the margin-top value as needed */
+}
+
+#estimate h1 {
+  margin-top: -60px; /* Adjust the margin-top value as needed */
+}
+
+/* Gallery Styles */
+
+.gallery-button {
+  margin-bottom: 170px;
+  margin-left: 45%;
+}

@@ -14,7 +14,7 @@ const Services = () => {
 
   return (
     <Container className="mt-5">
-      <h2>Our Services</h2>
+      <h1>Our Services</h1>
       <p>We offer a range of construction services, including roofing, siding, windows, gutters, general contracting. Our skilled team is committed to delivering top-notch craftsmanship and exceeding customer expectations. Your home is our priority, and we take pride in making your construction experience seamless and enjoyable.</p>
       <Row>
         {services.map((service) => (

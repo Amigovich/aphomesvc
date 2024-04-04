@@ -6,8 +6,8 @@ import Col from 'react-bootstrap/Col';
 function About() {
   return (
     <section id="about" className="about-content">
-      <Container>
-        <h2 className="text-center">About Us</h2>
+      <Container className='mt-5'>
+        <h1 className="text-center">About Us</h1>
         <Row>
           <Col className="about-container" xs={8} md={8}>
             <p className="p1">

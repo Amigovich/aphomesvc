@@ -10,12 +10,7 @@ function Navigation({ onItemClick }) {
     };
 
     return (
-    <Nav>
-        <Nav.Item>
-        <Link to="/about" className="nav-link" onClick={handleItemClick}>
-            About
-        </Link>
-        </Nav.Item>
+    <Nav className="ml-auto">
         <Nav.Item>
         <Link to="/services" className="nav-link" onClick={handleItemClick}>
             Services
@@ -24,6 +19,11 @@ function Navigation({ onItemClick }) {
         <Nav.Item>
         <Link to="/gallery" className="nav-link" onClick={handleItemClick}>
             Gallery
+        </Link>
+        </Nav.Item>
+        <Nav.Item>
+        <Link to="/about" className="nav-link" onClick={handleItemClick}>
+            About
         </Link>
         </Nav.Item>
         <Nav.Item>

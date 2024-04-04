@@ -50,7 +50,7 @@ const Gallery = () => {
       </Row>
       <Row className="mt-3">
         <Col>
-          <Button variant="primary" href={googleReviewsLink} target="_blank" rel="noopener noreferrer">
+          <Button variant="primary" href={googleReviewsLink} target="_blank" rel="noopener noreferrer" className="gallery-button">
             Google Reviews
           </Button>
         </Col>

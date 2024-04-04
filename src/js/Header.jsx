@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Navigation from './Navigation';
-import Navbar from 'react-bootstrap/Navbar';
+import { Navbar } from 'react-bootstrap';
 import logo from '/logo.png'; 
 
 function Header() {
@@ -13,25 +13,25 @@ function Header() {
 
   return (
     <header className="header">
-      <Navbar bg="green" expand="lg" expanded={expanded}>
-        <Navbar.Brand as={Link} to="/about">
-        <img
-            src={logo}
-            width="15%"
-            height="15%"
-            className="d-inline-block align-top"
-            alt="AP Home Services Logo"
+        <Navbar bg="green" expand="lg" expanded={expanded} variant="dark" collapseOnSelect>
+          <Navbar.Brand as={Link} to="/about">
+            <img
+              src={logo}
+              width="140px"
+              height="110px"
+              className="d-inline-block align-top logo" 
+              alt="AP Home Services Logo"
+            />
+          </Navbar.Brand>
+          <Navbar.Toggle
+            style={{ backgroundColor: 'gray' }}
+            aria-controls="responsive-navbar-nav"
+            onClick={() => setExpanded(!expanded)}
           />
-        </Navbar.Brand>
-        <Navbar.Toggle
-          style={{ backgroundColor: 'green' }}
-          aria-controls="basic-navbar-nav"
-          onClick={() => setExpanded(!expanded)}
-        />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Navigation onItemClick={handleNavItemClick} />
-        </Navbar.Collapse>
-      </Navbar>
+          <Navbar.Collapse id="responsive-navbar-nav" className="justify-content-end">
+            <Navigation onItemClick={handleNavItemClick} />
+          </Navbar.Collapse>
+        </Navbar>
     </header>
   );
 }
