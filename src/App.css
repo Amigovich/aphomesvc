@@ -41,6 +41,7 @@ p {
   background-color: #2a2c35; /* Primary color */
   color: #ffffff; /* Text color */
   padding: 0 !important;
+  overflow-x: hidden;
 }
 
 .header .navbar-nav {
@@ -52,7 +53,7 @@ p {
 
 .header .nav-link {
   width: 240%;
-  font-size: 26px; 
+  font-size: 30px; 
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -66,6 +67,11 @@ p {
 .header .navbar-brand {
   padding: 1px;
   margin-right: 8%;
+  margin-left: 1%;
+}
+
+.header .navbar-toggler {
+  margin-right: 5%;
 }
 
 .header .nav-link:hover {
@@ -95,7 +101,6 @@ p {
   left: 0;
   width: 100%;
   background-color: #2a2c35; /* Primary color */
-  color: #ffffff; /* Text color */
   font-size: 18px;
 }
 
@@ -190,4 +195,13 @@ p {
 .gallery-button {
   margin-bottom: 170px;
   margin-left: 45%;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {/* Ensures the image maintains its aspect ratio and fits within the specified dimensions */
+  background-color: transparent; /* Ensures the background color behind the image is transparent */
 }

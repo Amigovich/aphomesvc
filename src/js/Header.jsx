@@ -13,16 +13,16 @@ function Header() {
 
   return (
     <header className="header">
-        <Navbar bg="green" expand="lg" expanded={expanded} variant="dark" collapseOnSelect>
-          <Navbar.Brand as={Link} to="/about">
-            <img
-              src={logo}
-              width="140px"
-              height="110px"
-              className="d-inline-block align-top logo" 
-              alt="AP Home Services Logo"
-            />
-          </Navbar.Brand>
+        <Navbar bg="rgba(0, 0, 0, 0)" expand="lg" expanded={expanded} variant="dark" collapseOnSelect>
+        <Navbar.Brand as={Link} to="/about" className="logo-container">
+          <img
+            src={logo}
+            width="180px"
+            height="141px"
+            className="d-inline-block align-top logo"
+            alt="AP Home Services Logo"
+          />
+        </Navbar.Brand>
           <Navbar.Toggle
             style={{ backgroundColor: 'gray' }}
             aria-controls="responsive-navbar-nav"
