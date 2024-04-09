@@ -131,10 +131,7 @@ p {
   color: #8c8c8c; /* Accent color */
 }
 
-/* Content styles */
-.content {
-  padding: 50px;
-}
+
 
 /* Button styles */
 .btn-primary {
@@ -202,8 +199,22 @@ p {
   margin-top: 60px; /* Adjust the margin-top value as needed */
 }
 
-#estimate h1 {
-  margin-top: -60px; /* Adjust the margin-top value as needed */
+.partners-container ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.partners-container ul li {
+  margin-bottom: 5px; /* Adjust the margin between list items */
+}
+
+.partners-container ul li a {
+  text-decoration: none;
+  color: #007bff; /* Adjust the color of the links */
+}
+
+.about-container {
+  margin-left: 10%;
 }
 
 /* Gallery Styles */
