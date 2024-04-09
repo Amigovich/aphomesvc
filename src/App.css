@@ -6,6 +6,10 @@ html, body {
   padding: 0;
 }
 
+#estimate.content {
+  margin-bottom: 200px;
+}
+
 .content {
   margin-bottom: 100px;
 }
