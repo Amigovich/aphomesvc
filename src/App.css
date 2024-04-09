@@ -6,6 +6,10 @@ html, body {
   padding: 0;
 }
 
+.app-container {
+  margin-bottom: 80px;
+}
+
 .container-fluid {
   min-height: 100vh;
 }
