@@ -7,7 +7,7 @@ import { Header, About, Estimate, Gallery, Services, Footer } from './js';
 function App() {
   return (
     <div className="app-container">
-      <BrowserRouter>
+      <BrowserRouter basename="/APnetfirst-web">
         <Header />
         <Routes>
           <Route path='*' element={<About/>} />

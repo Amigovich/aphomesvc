@@ -21,6 +21,10 @@ h1, h2, h3, h4, h5, h6, a {
   font-family: 'Cuprum', sans-serif;
 }
 
+h1 {
+  margin-bottom: 30px !important;
+}
+
 h2 {
   margin-top: 15px;
   margin-bottom: 30px;
@@ -28,9 +32,20 @@ h2 {
   color: #555; /* Secondary text color */
 }
 
+.mb-3 .h5stuff {
+  font-family: 'Cuprum', sans-serif;
+  font-size: 31px;
+}
+
+.mb-3 .moreh5 {
+  font-family: 'Cuprum', sans-serif;
+  font-size: 25px;
+}
+
 p {
   color: #555; /* Secondary text color */
   font-family: 'Cuprum', sans-serif;
+  font-size: 23px;
 }
 
 /* Header styles */
@@ -54,6 +69,7 @@ p {
 .header .nav-link {
   width: 240%;
   font-size: 30px; 
+  font-weight: bold;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -195,6 +211,11 @@ p {
 .gallery-button {
   margin-bottom: 170px;
   margin-left: 45%;
+}
+
+.btn {
+  margin-top: 20px;
+  margin-left: 17.5%;
 }
 
 .logo-container {

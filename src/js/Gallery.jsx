@@ -4,33 +4,33 @@ import { Container, Row, Col, Card, Button, Carousel } from 'react-bootstrap';
 const Gallery = () => {
   // Sample data for images
   const images = [
-    { id: 1, src: 'APnetfirst-web/IMG_20231207_105942947_HDR.jpg'},
-    { id: 2, src: 'APnetfirst-web/IMG_20231207_133443881_HDR.jpg'},
-    { id: 3, src: 'APnetfirst-web/IMG_20231208_151631126.jpg'},
-    { id: 4, src: 'APnetfirst-web/IMG_20231208_151618797.jpg'},
-    { id: 5, src: 'APnetfirst-web/IMG_20240403_110802047.jpg'},
-    { id: 6, src: 'APnetfirst-web/IMG_20240403_144233779.jpg'},
-    { id: 7, src: 'APnetfirst-web/IMG_20240403_164521667.jpg'},
-    { id: 8, src: 'APnetfirst-web/IMG_20240403_165137768.jpg'},
-    { id: 9, src: 'APnetfirst-web/IMG_20240312_203206572.jpg'},
-    { id: 10, src: 'APnetfirst-web/IMG_20240320_143232538.jpg'},
-    { id: 11, src: 'APnetfirst-web/IMG_20240404_114335101.jpg'},
-    { id: 12, src: 'APnetfirst-web/IMG_20240404_180136697.jpg'},
-    { id: 13, src: 'APnetfirst-web/IMG_20240405_102835075.jpg'},
-    { id: 14, src: 'APnetfirst-web/IMG_20231206_143205000_HDR.jpg'},
-    { id: 15, src: 'APnetfirst-web/IMG_20231205_213909652.jpg'},
-    { id: 16, src: 'APnetfirst-web/IMG_20231017_171044785.jpg'},
-    { id: 17, src: 'APnetfirst-web/IMG_20231017_171113847_HDR.jpg'},
-    { id: 18, src: 'APnetfirst-web/IMG_20231020_141828432_HDR.jpg'},
-    { id: 19, src: 'APnetfirst-web/IMG_20231030_163804288.jpg'},
-    { id: 20, src: 'APnetfirst-web/IMG_20240405_134954491.jpg'},
+    { id: 1, src: './IMG_20231207_105942947_HDR.jpg'},
+    { id: 2, src: './IMG_20231207_133443881_HDR.jpg'},
+    { id: 3, src: './IMG_20231208_151631126.jpg'},
+    { id: 4, src: './IMG_20231208_151618797.jpg'},
+    { id: 5, src: './IMG_20240403_110802047.jpg'},
+    { id: 6, src: './IMG_20240403_144233779.jpg'},
+    { id: 7, src: './IMG_20240403_164521667.jpg'},
+    { id: 8, src: './IMG_20240403_165137768.jpg'},
+    { id: 9, src: './IMG_20240312_203206572.jpg'},
+    { id: 10, src: './IMG_20240320_143232538.jpg'},
+    { id: 11, src: './IMG_20240404_114335101.jpg'},
+    { id: 12, src: './IMG_20240404_180136697.jpg'},
+    { id: 13, src: './IMG_20240405_102835075.jpg'},
+    { id: 14, src: './IMG_20231206_143205000_HDR.jpg'},
+    { id: 15, src: './IMG_20231205_213909652.jpg'},
+    { id: 16, src: './IMG_20231017_171044785.jpg'},
+    { id: 17, src: './IMG_20231017_171113847_HDR.jpg'},
+    { id: 18, src: './IMG_20231020_141828432_HDR.jpg'},
+    { id: 19, src: './IMG_20231030_163804288.jpg'},
+    { id: 20, src: './IMG_20240405_134954491.jpg'},
   ];
 
   // Sample data for client reviews
   const clientReviews = [
-    { id: 1, name: 'John Doe', review: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.' },
-    { id: 2, name: 'Jane Doe', review: 'Vestibulum id ligula porta felis euismod semper. Maecenas faucibus mollis interdum.' },
-    { id: 3, name: 'Alice Smith', review: 'Donec ullamcorper nulla non metus auctor fringilla. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.' },
+    { id: 1, name: 'Review Name Coming Soon', review: 'Review content coming soon' },
+    { id: 2, name: 'Review Name Coming Soon', review: 'Review content coming soon' },
+    { id: 3, name: 'Review Name Coming Soon', review: 'Review content coming soon' },
   ];
 
   const groupedImages = [];
@@ -38,6 +38,14 @@ const Gallery = () => {
     groupedImages.push(images.slice(i, i + 4));
   }
 
+  const letterColors = [
+    '#8dc1e3', // Soft blue
+    '#d44c4c', // Soft red
+    '#e6e68a', // Soft yellow
+    '#8dc1e3', // Soft blue
+    '#79c779', // Soft green
+    '#d44c4c', // Soft red
+];
 
   // Link to Google reviews
   const googleReviewsLink = 'https://www.google.com/';
@@ -70,19 +78,44 @@ const Gallery = () => {
           <Col key={review.id} xs={12} className="mb-3">
             <Card>
               <Card.Body>
-                <Card.Title>{review.name}</Card.Title>
+                <Card.Title className='moreh5'>{review.name}</Card.Title>
                 <Card.Text>{review.review}</Card.Text>
               </Card.Body>
             </Card>
           </Col>
         ))}
       </Row>
-      <Row className="mt-3">
-        <Col>
-          <Button variant="primary" href={googleReviewsLink} target="_blank" rel="noopener noreferrer" className="gallery-button">
-            Google Reviews
-          </Button>
-        </Col>
+      <Row className="justify-content-center mt-3">
+    <Col xs={6} md={4}>
+    <Button
+    variant="outline-primary"
+    href={googleReviewsLink}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="gallery-button"
+    style={{ width: '60%', fontSize: '20px', backgroundColor: 'black', color: 'black', display: 'flex', justifyContent: 'center' }}>
+      <span>
+        {Array.from('Google').map((letter, index) => (
+            <span
+                key={index}
+                style={{ fontFamily: 'Arial', color: (letter.toLowerCase() === 'g') ? '#007bff' : letterColors[index] || 'inherit' }}
+            >
+                {letter}
+            </span>
+        ))}
+    </span>&nbsp;
+    <span>
+        {Array.from(' Reviews').map((letter, index) => (
+            <span
+                key={index}
+                style={{ fontFamily: 'Arial' }}
+            >
+                {letter}
+            </span>
+        ))}
+    </span>
+</Button>
+    </Col>
       </Row>
     </Container>
   );

@@ -21,7 +21,7 @@ const Services = () => {
           <Col key={service.id} md={6} lg={4} className="mb-3">
             <Card>
               <Card.Body>
-                <Card.Title>{service.title}</Card.Title>
+                <Card.Title className='h5stuff'>{service.title}</Card.Title>
                 <Card.Text>{service.description}</Card.Text>
               </Card.Body>
             </Card>
