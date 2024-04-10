@@ -7,15 +7,12 @@ html, body {
 }
 
 .svc-cont {
-margin-bottom: 78.8593px;
-}
-
-.svc-card .card-body {
-  padding: 0; /* Remove padding */
+margin-bottom: 14.8593px;
 }
 
 #estimate.content {
-  margin-bottom: 72.24999px;
+  margin-top: 60px;
+  margin-bottom: 82.24999px;
 }
 
 .content {
@@ -65,6 +62,45 @@ p {
 }
 
 /* Header styles */
+
+
+
+.active-line1 {
+  position: absolute;
+  bottom: 0px; /* Adjust the position of the line */
+  left: 19%;
+  width: 11%;
+  height: 3px;
+  background-color: rgb(0, 102, 255); /* Adjust the color of the line */
+}
+
+.active-line2 {
+  position: absolute;
+  bottom: 0px; /* Adjust the position of the line */
+  left: 39%;
+  width: 11%;
+  height: 3px;
+  background-color: rgb(0, 102, 255); /* Adjust the color of the line */
+}
+
+.active-line3 {
+  position: absolute;
+  bottom: 0px; /* Adjust the position of the line */
+  left: 59%;
+  width: 9.5%;
+  height: 3px;
+  background-color: rgb(0, 102, 255); /* Adjust the color of the line */
+}
+
+.active-line4 {
+  position: absolute;
+  bottom: 0px; /* Adjust the position of the line */
+  left: 78%;
+  width: 18%;
+  height: 3px;
+  background-color: rgb(0, 102, 255); /* Adjust the color of the line */
+}
+
 .header {
   position: sticky;
   top: 0;
