@@ -13,12 +13,12 @@ const Services = () => {
   ];
 
   return (
-    <Container className="mt-5">
+    <Container className="svc-cont mt-5">
       <h1>Our Services</h1>
       <p>We offer a range of construction services, including roofing, siding, windows, gutters, general contracting. Our skilled team is committed to delivering top-notch craftsmanship and exceeding customer expectations. Your home is our priority, and we take pride in making your construction experience seamless and enjoyable.</p>
       <Row>
         {services.map((service) => (
-          <Col key={service.id} md={6} lg={4} className="mb-3">
+          <Col key={service.id} md={6} lg={4} className="svc-card mb-3">
             <Card>
               <Card.Body>
                 <Card.Title className='h5stuff'>{service.title}</Card.Title>

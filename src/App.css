@@ -6,19 +6,19 @@ html, body {
   padding: 0;
 }
 
+.svc-cont {
+margin-bottom: 78.8593px;
+}
+
+.svc-card .card-body {
+  padding: 0; /* Remove padding */
+}
+
 #estimate.content {
-  margin-bottom: 70px;
+  margin-bottom: 72.24999px;
 }
 
 .content {
-  margin-bottom: 100px;
-}
-
-.app-container {
-  margin-bottom: 100px;
-}
-
-.mt-5 {
   margin-bottom: 100px;
 }
 
@@ -207,6 +207,10 @@ p {
 }
 
 /* About Styles */
+
+.about-content {
+  margin-bottom: 109.24999px;
+}
 
 .about-content h1 {
   margin-top: 60px; /* Adjust the margin-top value as needed */
