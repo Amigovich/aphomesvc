@@ -1,5 +1,6 @@
 import React from 'react';
-import { Container, Row, Col, Card, Button, Carousel } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
+import { Container, Row, Col, Card, Carousel } from 'react-bootstrap';
 
 const Gallery = () => {
   // Sample data for images
@@ -26,29 +27,10 @@ const Gallery = () => {
     { id: 20, src: './IMG_20240405_134954491.jpg'},
   ];
 
-  // Sample data for client reviews
-  const clientReviews = [
-    { id: 1, name: 'Review Name Coming Soon', review: 'Review content coming soon' },
-    { id: 2, name: 'Review Name Coming Soon', review: 'Review content coming soon' },
-    { id: 3, name: 'Review Name Coming Soon', review: 'Review content coming soon' },
-  ];
-
   const groupedImages = [];
   for (let i = 0; i < images.length; i += 4) {
     groupedImages.push(images.slice(i, i + 4));
   }
-
-  const letterColors = [
-    '#8dc1e3', // Soft blue
-    '#d44c4c', // Soft red
-    '#e6e68a', // Soft yellow
-    '#8dc1e3', // Soft blue
-    '#79c779', // Soft green
-    '#d44c4c', // Soft red
-];
-
-  // Link to Google reviews
-  const googleReviewsLink = 'https://www.google.com/';
 
   return (
     <Container className="mt-5">
@@ -72,50 +54,13 @@ const Gallery = () => {
           </Carousel>
         </Col>
       </Row>
-      <h1 className="mt-5">Client Reviews</h1>
       <Row>
-        {clientReviews.map((review) => (
-          <Col key={review.id} xs={12} className="mb-3">
-            <Card>
-              <Card.Body>
-                <Card.Title className='moreh5'>{review.name}</Card.Title>
-                <Card.Text>{review.review}</Card.Text>
-              </Card.Body>
-            </Card>
-          </Col>
-        ))}
+        <h4 className="mt-1">
+          Click the Arrows to See Our Projects!
+        </h4>
       </Row>
-      <Row className="justify-content-center mt-3">
-    <Col xs={6} md={4}>
-    <Button
-    variant="outline-primary"
-    href={googleReviewsLink}
-    target="_blank"
-    rel="noopener noreferrer"
-    className="gallery-button"
-    style={{ width: '60%', fontSize: '20px', backgroundColor: 'black', color: 'black', display: 'flex', justifyContent: 'center' }}>
-      <span>
-        {Array.from('Google').map((letter, index) => (
-            <span
-                key={index}
-                style={{ fontFamily: 'Arial', color: (letter.toLowerCase() === 'g') ? '#007bff' : letterColors[index] || 'inherit' }}
-            >
-                {letter}
-            </span>
-        ))}
-    </span>&nbsp;
-    <span>
-        {Array.from(' Reviews').map((letter, index) => (
-            <span
-                key={index}
-                style={{ fontFamily: 'Arial' }}
-            >
-                {letter}
-            </span>
-        ))}
-    </span>
-</Button>
-    </Col>
+      <Row>
+        <Link className="mt-5 mb-5">Check Out Our Awesome Client Reviews Here.</Link>
       </Row>
     </Container>
   );

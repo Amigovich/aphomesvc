@@ -28,7 +28,7 @@ function Header() {
             aria-controls="responsive-navbar-nav"
             onClick={() => setExpanded(!expanded)}
           />
-          <Navbar.Collapse id="responsive-navbar-nav" className="justify-content-end">
+          <Navbar.Collapse id="responsive-navbar-nav" className="justify-content-center">
             <Navigation onItemClick={handleNavItemClick} />
           </Navbar.Collapse>
         </Navbar>

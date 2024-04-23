@@ -13,9 +13,21 @@ function Navigation({ onItemClick }) {
     return (
     <Nav className="ml-auto">
         <Nav.Item>
+        <Link to="/home" className={`nav-link ${location.pathname === '/home' ? 'active' : ''}`} onClick={handleItemClick}>
+            Home
+            {location.pathname === '/home' && <div className="active-line4"></div>}
+        </Link>
+        </Nav.Item>
+        <Nav.Item>
         <Link to="/services" className={`nav-link ${location.pathname === '/services' ? 'active' : ''}`} onClick={handleItemClick}>
             Services
             {location.pathname === '/services' && <div className="active-line1"></div>}
+        </Link>
+        </Nav.Item>
+        <Nav.Item>
+        <Link to="/partners" className={`nav-link ${location.pathname === '/partners' ? 'active' : ''}`} onClick={handleItemClick}>
+            Our Partners
+            {location.pathname === '/partners' && <div className="active-line4"></div>}
         </Link>
         </Nav.Item>
         <Nav.Item>
@@ -25,15 +37,15 @@ function Navigation({ onItemClick }) {
         </Link>
         </Nav.Item>
         <Nav.Item>
-        <Link to="/about" className={`nav-link ${location.pathname === '/about' ? 'active' : ''}`} onClick={handleItemClick}>
-            About
-            {location.pathname === '/about' && <div className="active-line3"></div>}
+        <Link to="/reviews" className={`nav-link ${location.pathname === '/reviews' ? 'active' : ''}`} onClick={handleItemClick}>
+            Reviews
+            {location.pathname === '/reviews' && <div className="active-line4"></div>}
         </Link>
         </Nav.Item>
         <Nav.Item>
-        <Link to="/estimate" className={`nav-link ${location.pathname === '/estimate' ? 'active' : ''}`} onClick={handleItemClick}>
-            Get A Free Quote
-            {location.pathname === '/estimate' && <div className="active-line4"></div>}
+        <Link to="/about" className={`nav-link ${location.pathname === '/about' ? 'active' : ''}`} onClick={handleItemClick}>
+            About Us
+            {location.pathname === '/about' && <div className="active-line3"></div>}
         </Link>
         </Nav.Item>
     </Nav>

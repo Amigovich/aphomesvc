@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Container, Row, Col, Card, Carousel } from 'react-bootstrap';
 
 function About() {
@@ -37,25 +38,15 @@ function About() {
       <Container className='mt-5'>
         <h1 className="text-center">About Us</h1>
         <Row>
-        <Col xs={12} md={2} className="d-flex justify-content-end">
-            <div className="partners-container">
-              <h3>Our Partners</h3>
-              <ul>
-                <li><a href="https://www.andersenwindows.com/windows-and-doors/windows/">Andersen Windows and Doors</a></li>
-                <li><a href="https://www.marvin.com/products/windows">Marvin Windows and Doors</a></li>
-                <li><a href="https://www.kolbewindows.com/windows">Kolbe Windows and Doors</a></li>
-              </ul>
-            </div>
-          </Col>
-          <Col xs={12} md={8} className="about-container">
+          <Col xs={12} md={12} className="text-center">
             <p className="p1">
               Welcome to AP Home Services, your trusted partner in construction and home improvement. With a commitment to excellence and a focus on customer satisfaction, we bring your vision to life. Our dedicated team of professionals is here to make your dream home a reality.
             </p>
-            <p className="p2">
+            <p className="p2 mt-4">
               We are located in the Twin Cities area, serving the metro with dedication.
             </p>
           </Col>
-          <Row className="mt-5">
+          <Row className="mt-4">
           <Col xs={12} md={12}>
           <Carousel>
             {groupedImages.map((imageGroup, index) => (
@@ -74,6 +65,9 @@ function About() {
           </Carousel>
           </Col>
       </Row>
+        </Row>
+        <Row>
+            <Link className="text-center mt-3" style={{ textDecoration:"none", color:"black", fontSize:"30px", fontWeight:"bold" }}>Click Here to Contact Us!</Link>
         </Row>
       </Container>
     </section>

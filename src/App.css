@@ -1,7 +1,7 @@
 /* Global styles */
 
 html, body {
-  height: 100%;
+  height: auto;
   margin: 0;
   padding: 0;
 }
@@ -105,8 +105,8 @@ p {
   position: sticky;
   top: 0;
   z-index: 1000;
-  background-color: #2a2c35; /* Primary color */
-  color: #ffffff; /* Text color */
+  background-color: #262b3d; /* Primary color */
+  color: white; /* Text color */
   padding: 0 !important;
   overflow-x: hidden;
 }
@@ -143,7 +143,7 @@ p {
 }
 
 .header .nav-link:hover {
-  color: #8c8c8c; /* Accent color */
+  color: white; /* Accent color */
 }
 
 @media (max-width: 1074px) {
@@ -157,15 +157,42 @@ p {
   }
 
   .navbar-collapse.show {
-    display: block;
+    display: flex;
+    justify-content: center !important;
   }
+}
+
+.header2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #303963; /* Primary color */
+  color: #ffffff; /* Text color */
+  padding: 10px;
+}
+
+.header2 .right {
+  text-decoration: none;
+  color: white;
+}
+
+.header2 .left{
+  text-decoration: none;
+  color: white;
+}
+
+.header2 .middle {
+  flex: 1;
+  text-align: center;
+  text-decoration: none;
+  color: white;
 }
 
 /* Footer styles */
 
 .footer {
   position: relative; /* Change to relative positioning */
-  background-color: #2a2c35; /* Primary color */
+  background-color: #262b3d; /* Primary color */
   font-size: 18px;
   padding: 0px 0; /* Add padding for spacing */
   clear: both; /* Clear floats */
@@ -245,11 +272,8 @@ p {
 /* About Styles */
 
 .about-content {
-  margin-bottom: 109.24999px;
-}
-
-.about-content h1 {
-  margin-top: 60px; /* Adjust the margin-top value as needed */
+  height: auto;
+  margin-bottom: 66.7499px;
 }
 
 .partners-container ul {
@@ -273,7 +297,7 @@ p {
 /* Gallery Styles */
 
 .gallery-button {
-  margin-bottom: 170px;
+  margin-bottom: 70px;
   margin-left: 45%;
 }
 
