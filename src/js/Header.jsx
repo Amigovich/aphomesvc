@@ -14,7 +14,7 @@ function Header() {
   return (
     <header className="header">
         <Navbar bg="rgba(0, 0, 0, 0)" expand="lg" expanded={expanded} variant="dark" collapseOnSelect>
-        <Navbar.Brand as={Link} to="/about" className="logo-container">
+        <Navbar.Brand as={Link} to="/home" className="logo-container">
           <img
             src={logo}
             width="180px"

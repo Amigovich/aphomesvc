@@ -67,7 +67,7 @@ function About() {
       </Row>
         </Row>
         <Row>
-            <Link className="text-center mt-3" style={{ textDecoration:"none", color:"black", fontSize:"30px", fontWeight:"bold" }}>Click Here to Contact Us!</Link>
+            <Link to="/estimate" className="text-center mt-3" style={{ textDecoration:"none", color:"black", fontSize:"30px", fontWeight:"bold" }}>Click Here to Contact Us!</Link>
         </Row>
       </Container>
     </section>

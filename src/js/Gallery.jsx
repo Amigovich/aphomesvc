@@ -60,7 +60,7 @@ const Gallery = () => {
         </h4>
       </Row>
       <Row>
-        <Link className="mt-5 mb-5">Check Out Our Awesome Client Reviews Here.</Link>
+        <Link to="/reviews" className="mt-5 mb-5">Check Out Our Awesome Client Reviews Here.</Link>
       </Row>
     </Container>
   );
