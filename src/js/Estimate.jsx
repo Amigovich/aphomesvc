@@ -4,10 +4,18 @@ import Button from 'react-bootstrap/Button';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import emailjs from 'emailjs-com';
+import backgroundImage from '/homesimage.jpg';
 
 function Estimate() {
     const [showAlert, setShowAlert] = useState(false);
     const [isSubmitting, setIsSubmitting] = useState(false);
+    const backgroundStyle = {
+        backgroundImage: `url(${backgroundImage})`,
+        backgroundSize: 'cover',
+        backgroundRepeat: 'no-repeat',
+        backgroundPosition: 'center',
+    };
+
 
     function handleSubmit(event) {
         event.preventDefault();
@@ -56,22 +64,24 @@ function Estimate() {
     }
 
     return (
+        <div className="home-page" style={backgroundStyle}>
+        <div className="mid-box">
         <section id="estimate" className="content">
-            <h1>Contact Us</h1>
-            <p>Ready to start your construction project with AP Home Services?</p>
-            <p>Interested in financing a project?</p>
-            <p>Contact us for a personalized consultation and a free quote today.</p>
+            <h1 className="mt-5" style= {{ color:"white" }}>Contact Us</h1>
+            <p style= {{ color:"lightgray" }}>Ready to start your construction project with AP Home Services?</p>
+            <p style= {{ color:"lightgray" }}>Interested in financing a project?</p>
+            <p style= {{ color:"lightgray" }}>Contact us for a personalized consultation and a free quote today.</p>
             <Form id="contactForm" onSubmit={handleSubmit}>
     <Row className="mb-4">
         <Col md={6}>
         <Form.Group controlId="name">
-            <Form.Label style={{ width: '100%', fontFamily: 'Cuprum', fontSize: '20px' }}>Name:</Form.Label>
+            <Form.Label style={{ width: '100%', fontFamily: 'Cuprum', fontSize: '20px', color:"lightgray" }}>Name:</Form.Label>
             <Form.Control style={{ fontFamily: 'Cuprum' }} type="text" placeholder="Enter your name" required autoComplete="name" />
         </Form.Group>
         </Col>
         <Col md={6}>
         <Form.Group controlId="email">
-            <Form.Label style={{ width: '100%', fontFamily: 'Cuprum', fontSize: '20px' }}>Email:</Form.Label>
+            <Form.Label style={{ width: '100%', fontFamily: 'Cuprum', fontSize: '20px', color:"lightgray"  }}>Email:</Form.Label>
             <Form.Control style={{ fontFamily: 'Cuprum' }} type="email" placeholder="Enter your email" required autoComplete="email" />
         </Form.Group>
         </Col>
@@ -79,13 +89,13 @@ function Estimate() {
     <Row className="mb-4">
         <Col md={6}>
         <Form.Group controlId="phone">
-            <Form.Label style={{ width: '100%', fontFamily: 'Cuprum', fontSize: '20px' }}>Phone:</Form.Label>
+            <Form.Label style={{ width: '100%', fontFamily: 'Cuprum', fontSize: '20px', color:"lightgray"  }}>Phone:</Form.Label>
             <Form.Control style={{ fontFamily: 'Cuprum' }} type="text" placeholder="Enter your phone number" required autoComplete="tel" />
         </Form.Group>
         </Col>
         <Col md={6}>
         <Form.Group controlId="address">
-            <Form.Label style={{ width: '100%', fontFamily: 'Cuprum', fontSize: '20px' }}>Address:</Form.Label>
+            <Form.Label style={{ width: '100%', fontFamily: 'Cuprum', fontSize: '20px', color:"lightgray"  }}>Address:</Form.Label>
             <Form.Control style={{ fontFamily: 'Cuprum' }} type="text" placeholder="Enter your address" required autoComplete="street-address" />
         </Form.Group>
         </Col>
@@ -93,7 +103,7 @@ function Estimate() {
     <Row className="mb-4">
         <Col md={6}>
         <Form.Group controlId="services">
-            <Form.Label style={{ width: '100%', fontFamily: 'Cuprum', fontSize: '20px' }}>Services Requested:</Form.Label>
+            <Form.Label style={{ width: '100%', fontFamily: 'Cuprum', fontSize: '20px', color:"lightgray"  }}>Services Requested:</Form.Label>
             <Form.Control style={{ fontFamily: 'Cuprum' }} as="select" required autoComplete="off">
             <option value="windows">Select One</option>
             <option value="windows">Windows</option>
@@ -107,7 +117,7 @@ function Estimate() {
         </Col>
         <Col md={6}>
         <Form.Group controlId="additionalServices">
-            <Form.Label style={{ width: '130%', fontFamily: 'Cuprum', fontSize: '20px' }}>Details and/or Additional Services:</Form.Label>
+            <Form.Label style={{ width: '130%', fontFamily: 'Cuprum', fontSize: '20px', color:"lightgray"  }}>Details and/or Additional Services:</Form.Label>
             <Form.Control style={{ fontFamily: 'Cuprum' }} type="text" placeholder="Enter additional services" autoComplete="off"/>
         </Form.Group>
         </Col>
@@ -130,6 +140,8 @@ function Estimate() {
     )}
     </Form>
         </section>
+        </div>
+        </div>
     );
 }
 

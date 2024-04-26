@@ -33,7 +33,7 @@ const Gallery = () => {
   }
 
   return (
-    <Container className="mt-5">
+    <Container className="gallery-cont mt-5">
       <h1>Gallery</h1>
       <Row>
         <Col>

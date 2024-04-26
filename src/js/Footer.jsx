@@ -7,7 +7,7 @@ import logo from '/logo.png';
 function Footer() {
     return (
         <footer className="footer">
-            <Navbar>
+            <Navbar className="footerpadding">
                 <Nav className="mr-auto">
                     <Navbar.Brand as={Link} to="/home" className="logo-container">
                         <img

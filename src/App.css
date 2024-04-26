@@ -11,9 +11,21 @@ margin-bottom: 14.8593px;
 }
 
 #estimate.content {
-  margin-top: 60px;
+  margin-top:0px;
   margin-bottom: 82.24999px;
 }
+
+.mid-box {
+  background-color: #303963f6; 
+  padding: 1px;
+  border-radius: 30px;
+  padding-bottom: 80px;
+  margin-left: 25%;
+  margin-right: 25%;
+  position: relative;
+  top: 5%;
+}
+
 
 .content {
   margin-bottom: 100px;
@@ -146,7 +158,7 @@ p {
   color: white; /* Accent color */
 }
 
-@media (max-width: 1074px) {
+@media (max-width: 1270px) {
   /* Apply styles for screens smaller than 768px */
   .navbar-toggler {
     display: block;
@@ -194,7 +206,7 @@ p {
   position: relative; /* Change to relative positioning */
   background-color: #262b3d; /* Primary color */
   font-size: 18px;
-  padding: 0px 0; /* Add padding for spacing */
+  padding: 0;  /* Add padding for spacing */
   clear: both; /* Clear floats */
 }
 
@@ -203,12 +215,12 @@ p {
 }
 
 .footer .mr-auto {
-  margin-left: 1%;
+  margin-left: 2%;
 }
 
 .footer .ml-auto {
   margin-left: auto !important;
-  margin-right: 1%;
+  margin-right: 2%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -216,6 +228,10 @@ p {
 
 .footer .nav-link:hover {
   color: #8c8c8c; /* Accent color */
+}
+
+.footer .footerpadding {
+  padding: 0px 0;
 }
 
 /* Button styles */
@@ -282,7 +298,11 @@ p {
 
 .about-content {
   height: auto;
-  margin-bottom: 66.7499px;
+  margin-bottom: 67.7499px;
+}
+
+.partners-container {
+  margin-bottom: 41.2499px;
 }
 
 .partners-container ul {
@@ -305,6 +325,10 @@ p {
 
 /* Gallery Styles */
 
+.gallery-cont {
+  margin-bottom: 135px;
+}
+
 .gallery-button {
   margin-bottom: 70px;
   margin-left: 45%;
@@ -320,6 +344,52 @@ p {
   align-items: center;
 }
 
-.logo {/* Ensures the image maintains its aspect ratio and fits within the specified dimensions */
-  background-color: transparent; /* Ensures the background color behind the image is transparent */
+.logo {
+  background-color: transparent;
+}
+
+/* home styles */
+
+.home-page {
+  height: 100% !important;
+}
+
+.app-container {
+  height: 100vh !important;
+  overflow-x: hidden;
+}
+
+.left-content {
+  margin-left: 10%;
+}
+
+.right-content {
+    margin-left: 10%;
+}
+
+.homehead {
+  margin-left: 10%;
+}
+
+.left-box {
+  background-color: #262b3df3; 
+  padding: 1px;
+  border-radius: 30px;
+  padding-bottom: 21%;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.right-box {
+  background-color: #303963f6; 
+  padding: 1px;
+  border-radius: 30px;
+  padding-bottom: 80px;
+  margin-left: 5%;
+  margin-right: 15%;
+}
+
+.homep {
+  margin-right: 10%;
+  font-size: 26px;
 }
