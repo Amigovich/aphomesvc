@@ -90,7 +90,7 @@ const HomePage = () => {
                                 </Row>
                                 <Row className="mt-5">
                                     <Col xs={3}>
-                                        <button type="submit" className="btn btn-primary" style= {{ width:"200px" }}>Send</button>
+                                        <button type="submit" className="sendbtn btn-primary" style= {{ width:"200px" }}>Send</button>
                                     </Col>
                                 </Row>
                             </Form>

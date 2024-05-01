@@ -213,7 +213,7 @@ p {
 }
 
 .middle:hover {
-  color: rgb(32, 153, 223);
+  color: rgb(32, 153, 223)!important;
 }
 
 /* partners styles */
@@ -287,6 +287,10 @@ margin-top: 60px;
 
 .footer .footerpadding {
   padding: 0px 0;
+}
+
+.foot-cont:hover {
+  color: rgb(32, 153, 223)!important;
 }
 
 /* Button styles */
@@ -495,6 +499,28 @@ margin-top: 60px;
   padding-right: 10px;
 }
 
+.sendbtn {
+  background-color: rgb(32, 153, 223) !important;
+  margin-bottom: 20px;
+  border-radius: 20px;
+}
+
+.sendbtn:hover {
+  color: gray;
+  background-color: rgb(22, 108, 158) !important;
+}
+
+#estimate .sendbtn {
+  background-color: rgb(32, 153, 223) !important;
+  margin-bottom: -80px;
+  border-radius: 20px;
+}
+
+#estimate .sendbtn:hover {
+  color: gray !important;
+  background-color: rgb(22, 108, 158) !important;
+}
+
 /* reviews styles */
 
 .reviewbox {
@@ -580,4 +606,38 @@ margin-top: 60px;
 
 .con-cont {
   margin-bottom: 57px;
+}
+
+/* fading */
+
+.middle,
+.middle:hover {
+  transition: color 0.5s ease;
+}
+
+.btn-primary,
+.btn-primary:hover,
+.btn-secondary,
+.btn-secondary:hover,
+.gallery-button,
+.gallery-button:hover,
+.reviews-link2,
+.reviews-link2:hover,
+.reviews-link,
+.reviews-link:hover,
+.btn,
+.btn:hover,
+.svc-card:hover .h5stuff,
+.svc-card:hover .text-center {
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.header .nav-link,
+.header .nav-link:hover {
+  transition: color 0.5s ease;
+}
+
+.footer .nav-link,
+.footer .nav-link:hover {
+  transition: color 0.5s ease;
 }

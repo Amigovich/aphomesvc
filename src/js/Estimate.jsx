@@ -124,7 +124,7 @@ function Estimate() {
     </Row>
     <Row>
     <Col md={9}>
-    <Button variant="primary" type="submit" style={{ width: '100%' }}>
+    <Button type="submit" className="sendbtn mt-5" style={{ width: '100%' }}>
     {isSubmitting ? (
     <span className="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
     ) : (
