@@ -563,19 +563,18 @@ margin-top: 60px;
 
 /* doors */
 
-.divvy {
-  margin-left: -44%;
-}
-
-.svc-title {
-  margin-left: 18%;
+.door-image {
+  height: 300px !important; /* Adjust as needed */
+  object-fit: cover;
 }
 
 .btn {
   display: flex;
   position: relative;
   bottom: 28px;
-  width: 100px;
+  width: 120px;
+  margin-left: 30px;
+  margin-right: 30px;
   background-color: #303963f6 !important;
 }
 
@@ -584,35 +583,65 @@ margin-top: 60px;
   background-color: #303963d0 !important;
 }
 
-/* windows */
-
-.divvy2 {
-  margin-left: -44%;
+.tile {
+  border-radius: 30px;
+  border: 2px solid #303963f6;
+  padding-top: 30px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
-.svc-title2 {
-  margin-left: 16.5%;
+.benefits {
+  border-radius: 30px;
+  border: 2px solid #303963f6;
+  padding-top: 20px;
+  padding-bottom: 5px;
+  padding-left: 2%;
+  padding-right: 2%;
+}
+
+/* windows */
+
+.benp {
+  font-size: 20px;
+}
+
+.window-image {
+  height: 300px !important;
+  object-fit: cover;
 }
 
 /* contracting */
 
-.divvy3 {
-  margin-left: -44.5%;
-}
-
-.svc-title3 {
-  margin-left: 28%;
-}
-
 .con-cont {
   margin-bottom: 57px;
+}
+
+.cont-left {
+  background-color: #303963 !important;
+  border-radius: 40px;
+  margin-right: 20px;
+  margin-left: 3%;
+}
+
+.cont-right {
+  background-color: #303963 !important;
+  border-radius: 40px;
+  margin-left: 20px;
+}
+
+.benp1 {
+  color: lightgray;
+  padding-right: 4% !important;
+  padding-bottom: 10px;
 }
 
 /* fading */
 
 .middle,
 .middle:hover {
-  transition: color 0.5s ease;
+  transition: color 0.4s ease;
 }
 
 .btn-primary,
@@ -629,15 +658,15 @@ margin-top: 60px;
 .btn:hover,
 .svc-card:hover .h5stuff,
 .svc-card:hover .text-center {
-  transition: background-color 0.5s ease, color 0.5s ease;
+  transition: background-color 0.4s ease, color 0.4s ease;
 }
 
 .header .nav-link,
 .header .nav-link:hover {
-  transition: color 0.5s ease;
+  transition: color 0.4s ease;
 }
 
 .footer .nav-link,
 .footer .nav-link:hover {
-  transition: color 0.5s ease;
+  transition: color 0.4s ease;
 }
