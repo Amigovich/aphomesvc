@@ -44,7 +44,7 @@ const Reviews = () => {
     target="_blank"
     rel="noopener noreferrer"
     className="gallery-button"
-    style={{ width: '200px', fontSize: '20px', backgroundColor: 'darkblue', color: 'white', display: 'flex', justifyContent: 'center' }}>
+    style={{ width: '200px', fontSize: '20px', color: 'white', display: 'flex', justifyContent: 'center' }}>
         <span>
         {Array.from('Google').map((letter, index) => (
             <span

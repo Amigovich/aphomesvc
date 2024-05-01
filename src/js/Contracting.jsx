@@ -1,10 +1,14 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 const Contracting = () => {
   return (
-    <Container className="mt-5">
-      <h1 className="text-center">General Contracting Services</h1>
+    <Container className="con-cont mt-5">
+       <div className="d-flex align-items-center divvy3">
+        <Link to="/services" className="btn btn-primary">Back</Link>
+        <h1 className="svc-title3 text-center">General Contracting Services</h1>
+      </div>
       <p className="text-center">From interior renovations to exterior improvements, AP Home Services provides comprehensive general contracting services to enhance both the inside and outside of your home.</p>
       
       <Row className="mb-3">

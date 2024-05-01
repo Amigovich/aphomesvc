@@ -1,52 +1,63 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
+import awningWindowsImage from '/awning-windows.jpg';
+import casementWindowsImage from '/casement-windows.jpg';
+import doubleSingleHungWindowsImage from '/double-hung-windows.jpg';
+import glidingWindowsImage from '/gliding-windows.jpg';
+import pictureWindowsImage from '/picture-window.jpg';
+import bayBowWindowsImage from '/bow-bay-windows.jpg';
+import specialtyWindowsImage from '/specialty-windows.jpg';
 
 const Windows = () => {
   return (
     <Container className="mt-5">
-      <h1 className="text-center">Windows Replacement And Installation with AP Home Services</h1>
+       <div className="d-flex align-items-center divvy2">
+        <Link to="/services" className="btn btn-primary">Back</Link>
+        <h1 className="svc-title2 text-center">Windows Replacement And Installation with AP Home Services</h1>
+      </div>
       <p className="text-center">Our trusted by industry-leading partners <a href="https://www.andersenwindows.com/windows-and-doors/windows/" target="_blank" rel="noreferrer">Anderson</a>, <a href="https://www.marvin.com/products/windows" target="_blank" rel="noreferrer">Marvin</a>, and <a href="https://www.kolbewindows.com/windows" target="_blank" rel="noreferrer">Kobe</a>. Our team is dedicated to improving your home's comfort, style, and energy efficiency. From selecting the right windows to expert installation, we're here to make the process smooth and stress-free.</p>
       
       <Row className="mb-3 mt-5 justify-content-center">
         <Col md={6} className="mb-3">
           <div className="tile text-center">
-            <img src="https://via.placeholder.com/150" alt="Awning Windows" />
+            <img src={awningWindowsImage} alt="Awning Windows" />
             <p><strong>Awning Windows:</strong> Top-hinged windows that open outward from the bottom. Ideal for ventilation even during light rain. Commonly used in bedrooms, basements, and bathrooms for privacy and airflow.</p>
           </div>
         </Col>
         <Col md={6} className="mb-3">
           <div className="tile text-center">
-            <img src="https://via.placeholder.com/150" alt="Casement Windows" />
+            <img src={casementWindowsImage} alt="Casement Windows" />
             <p><strong>Casement Windows:</strong> Side-hinged windows that swing outward like a door. Offer unobstructed views and excellent ventilation. Popular choice for living rooms and kitchens.</p>
           </div>
         </Col>
         <Col md={6} className="mb-3">
           <div className="tile text-center">
-            <img src="https://via.placeholder.com/150" alt="Double & Single-Hung Windows" />
+            <img src={doubleSingleHungWindowsImage} alt="Double & Single-Hung Windows" />
             <p><strong>Double & Single-Hung Windows:</strong> Two vertically sliding sashes (double-hung) or one fixed upper sash with a lower operable sash (single-hung). Versatile ventilation options and easy cleaning.</p>
           </div>
         </Col>
         <Col md={6} className="mb-3">
           <div className="tile text-center">
-            <img src="https://via.placeholder.com/150" alt="Gliding Windows" />
+            <img src={glidingWindowsImage} alt="Gliding Windows" />
             <p><strong>Gliding Windows:</strong> Horizontal sliding windows with sashes that glide along tracks. Easy to operate and suitable for rooms with limited space.</p>
           </div>
         </Col>
         <Col md={6} className="mb-3">
           <div className="tile text-center">
-            <img src="https://via.placeholder.com/150" alt="Picture Windows" />
+            <img src={pictureWindowsImage} alt="Picture Windows" />
             <p><strong>Picture Windows:</strong> Fixed windows that provide expansive views and natural light. Perfect for showcasing scenic views and enhancing interior aesthetics.</p>
           </div>
         </Col>
         <Col md={6} className="mb-3">
           <div className="tile text-center">
-            <img src="https://via.placeholder.com/150" alt="Bay & Bow Windows" />
+            <img src={bayBowWindowsImage} alt="Bay & Bow Windows" />
             <p><strong>Bay & Bow Windows:</strong> Bay windows protrude from the wall and consist of three or more windows set at angles. Bow windows are curved and typically include four or more windows. Both add architectural interest and create additional interior space.</p>
           </div>
         </Col>
         <Col md={6} className="mb-3">
           <div className="tile text-center">
-            <img src="https://via.placeholder.com/150" alt="Specialty Windows" />
+            <img src={specialtyWindowsImage} alt="Specialty Windows" />
             <p><strong>Specialty Windows:</strong> Custom-shaped windows in various designs, including arched, round, and geometric shapes. Add character to your home and complement any architectural style.</p>
           </div>
         </Col>

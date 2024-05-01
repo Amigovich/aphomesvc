@@ -15,37 +15,37 @@ function Navigation({ onItemClick }) {
         <Nav.Item>
         <Link to="/home" className={`nav-link ${location.pathname === '/home' ? 'active' : ''}`} onClick={handleItemClick}>
             Home
-            {location.pathname === '/home' && <div className="active-line4"></div>}
+            {location.pathname === '/home' && <div className="active-line1"></div>}
         </Link>
         </Nav.Item>
         <Nav.Item>
         <Link to="/services" className={`nav-link ${location.pathname === '/services' ? 'active' : ''}`} onClick={handleItemClick}>
             Services
-            {location.pathname === '/services' && <div className="active-line1"></div>}
+            {location.pathname === '/services' && <div className="active-line2"></div>}
         </Link>
         </Nav.Item>
         <Nav.Item>
         <Link to="/partners" className={`nav-link ${location.pathname === '/partners' ? 'active' : ''}`} onClick={handleItemClick}>
             Our Partners
-            {location.pathname === '/partners' && <div className="active-line4"></div>}
+            {location.pathname === '/partners' && <div className="active-line3"></div>}
         </Link>
         </Nav.Item>
         <Nav.Item>
         <Link to="/gallery" className={`nav-link ${location.pathname === '/gallery' ? 'active' : ''}`} onClick={handleItemClick}>
             Gallery
-            {location.pathname === '/gallery' && <div className="active-line2"></div>}
+            {location.pathname === '/gallery' && <div className="active-line4"></div>}
         </Link>
         </Nav.Item>
         <Nav.Item>
         <Link to="/reviews" className={`nav-link ${location.pathname === '/reviews' ? 'active' : ''}`} onClick={handleItemClick}>
             Reviews
-            {location.pathname === '/reviews' && <div className="active-line4"></div>}
+            {location.pathname === '/reviews' && <div className="active-line5"></div>}
         </Link>
         </Nav.Item>
         <Nav.Item>
         <Link to="/about" className={`nav-link ${location.pathname === '/about' ? 'active' : ''}`} onClick={handleItemClick}>
             About Us
-            {location.pathname === '/about' && <div className="active-line3"></div>}
+            {location.pathname === '/about' && <div className="active-line6"></div>}
         </Link>
         </Nav.Item>
     </Nav>

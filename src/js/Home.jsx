@@ -16,7 +16,7 @@ const HomePage = () => {
                 <Col className="mt-5" md={6}>
                     <div className="mt-5 left-box">
                         <div className="mt-5 left-content">
-                            <h1 className="mt-5 text-center" style= {{ color:"white" }}>Welcome to AP Home Services</h1>
+                            <h1 className="mt-5 text-center" style= {{ color:"white", paddingLeft:"10px", paddingRight:"10px" }}>Welcome to AP Home Services</h1>
                             <p className="homep text-center" style= {{ color:"lightgray" }}>
                                 Your premier residential window and door replacement contractor! Ready to elevate your home with new windows and doors? Contact us today to schedule a free consultation. Our friendly and knowledgeable team is here to answer your questions, discuss your options, and provide you with a customized solution that fits your budget and lifestyle. Let's turn your house into the home of your dreams together!
                             </p>
@@ -88,7 +88,7 @@ const HomePage = () => {
                                         </Form.Group>
                                     </Col>
                                 </Row>
-                                <Row>
+                                <Row className="mt-5">
                                     <Col xs={3}>
                                         <button type="submit" className="btn btn-primary" style= {{ width:"200px" }}>Send</button>
                                     </Col>
