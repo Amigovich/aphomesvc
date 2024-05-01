@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Container, Row, Col, Card, Carousel } from 'react-bootstrap';
+import { BsChevronLeft, BsChevronRight } from 'react-icons/bs';
 
 function About() {
 
@@ -48,13 +49,16 @@ function About() {
           </Col>
           <Row className="mt-4">
           <Col xs={12} md={12}>
-          <Carousel>
+          <Carousel style= {{ overflow:"visible" }}
+            prevIcon={<BsChevronLeft className="carousel-arrow left-arrow" />}
+            nextIcon={<BsChevronRight className="carousel-arrow right-arrow" />}
+          >
             {groupedImages.map((imageGroup, index) => (
               <Carousel.Item key={index}>
                 <Row>
                   {imageGroup.map((image) => (
-                    <Col xs={12} md={3} key={image.id} className="mb-3">
-                      <Card>
+                    <Col xs={12} md={3} key={image.id} className="mb-5">
+                      <Card style= {{ backgroundColor:"#262b3df3", padding:"5px" }}>
                         <Card.Img variant="top" src={image.src} style={{ width: '100%', height: '200px' }} />
                       </Card>
                     </Col>
@@ -66,8 +70,10 @@ function About() {
           </Col>
       </Row>
         </Row>
-        <Row>
-            <Link to="/estimate" className="text-center mt-3" style={{ textDecoration:"none", color:"black", fontSize:"30px", fontWeight:"bold" }}>Click Here to Contact Us!</Link>
+        <Row className="justify-content-center">
+          <Col xs={12} md={12} className="text-center">
+          <Link to="/estimate" className="reviews-link2" style={{ fontSize:"30px", fontWeight:"bold" }}>Click Here to Contact Us!</Link>
+          </Col>
         </Row>
       </Container>
     </section>

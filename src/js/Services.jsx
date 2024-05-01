@@ -1,32 +1,45 @@
 import React from 'react';
 import { Container, Card, Row, Col } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 const Services = () => {
-  // Sample data for services
-  const services = [
-    { id: 1, title: 'Roofing', description: 'We offer professional roofing services to protect your home from the elements.' },
-    { id: 2, title: 'Siding', description: 'Enhance the appearance and durability of your home with our siding solutions.' },
-    { id: 4, title: 'Gutters', description: 'Keep your home safe from water damage with our gutter installation and repair services.' },
-    { id: 5, title: 'General Contracting', description: 'Get comprehensive construction services for your home projects.' },
-    { id: 6, title: 'Replacement Windows', description: 'Upgrade your home with energy-efficient replacement windows.' },
-    { id: 7, title: 'Replacement Doors', description: 'Enhance the security and style of your home with replacement doors.' },
-  ];
-
   return (
     <Container className="svc-cont mt-5">
-      <h1>Our Services</h1>
-      <p>We offer a range of construction services, including roofing, siding, windows, gutters, general contracting. Our skilled team is committed to delivering top-notch craftsmanship and exceeding customer expectations. Your home is our priority, and we take pride in making your construction experience seamless and enjoyable.</p>
+      <h1 className="text-center">Our Services</h1>
+      <p className="text-center">We offer a range of home improvement services, including replacing windows/doors, and general contracting. Our skilled team is committed to delivering top-notch craftsmanship and exceeding customer expectations. Your home is our priority, and we take pride in making your home improvement experience seamless and enjoyable.</p>
       <Row>
-        {services.map((service) => (
-          <Col key={service.id} md={6} lg={4} className="svc-card mb-3">
-            <Card>
-              <Card.Body>
-                <Card.Title className='h5stuff'>{service.title}</Card.Title>
-                <Card.Text>{service.description}</Card.Text>
+        <Col md={6} lg={6} className="mb-3 mt-5">
+          <Link to="/doors" className="text-decoration-none">
+            <Card className="svc-card">
+              <Card.Body className="svc-card2">
+                <Card.Title className='h5stuff text-center' style= {{ color:"white" }}>Replacement Doors</Card.Title>
+                <Card.Text className='text-center' style= {{ color:"lightgray" }}>Enhance the security and style of your home with replacement doors.</Card.Text>
               </Card.Body>
             </Card>
-          </Col>
-        ))}
+          </Link>
+        </Col>
+        <Col md={6} lg={6} className="col2 mb-3 mt-5">
+          <Link to="/windows" className="text-decoration-none">
+            <Card className="svc-card">
+              <Card.Body className="svc-card2">
+                <Card.Title className='h5stuff text-center' style= {{ color:"white" }}>Replacement Windows</Card.Title>
+                <Card.Text className='text-center' style= {{ color:"lightgray" }}>Upgrade your home with energy-efficient windows that enhance curb appeal and increase comfort.</Card.Text>
+              </Card.Body>
+            </Card>
+          </Link>
+        </Col>
+      </Row>
+      <Row className="justify-content-center">
+        <Col md={6} lg={7} className="mb-3 mx-auto">
+          <Link to="/contracting" className="text-decoration-none">
+            <Card className="svc-card">
+              <Card.Body className="svc-card2">
+                <Card.Title className='h5stuff text-center' style= {{ color:"white" }}>General Contracting</Card.Title>
+                <Card.Text className='text-center' style= {{ color:"lightgray" }}>From minor repairs to major renovations, we offer comprehensive general contracting services to meet all your home improvement needs.</Card.Text>
+              </Card.Body>
+            </Card>
+          </Link>
+        </Col>
       </Row>
     </Container>
   );

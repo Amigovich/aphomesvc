@@ -22,7 +22,7 @@ function Footer() {
                 <Nav className="thisone">
                     <Nav.Link as={Link} to="/estimate" style={{ textDecoration: 'none', color: 'white' }}>Contact Us</Nav.Link>
                 </Nav>
-                <Navbar.Text className="ml-auto" style={{ textDecoration: 'none', color: 'white' }}>&copy; {new Date().getFullYear()} AP Home Services. All rights reserved. MN License #BC</Navbar.Text>
+                <Navbar.Text className="ml-auto" style={{ textDecoration: 'none', color: 'white' }}>&copy; {new Date().getFullYear()} AP Home Services.&nbsp;&nbsp; All rights reserved.&nbsp;&nbsp; MN License #BC807818</Navbar.Text>
             </Navbar>
         </footer>
     );

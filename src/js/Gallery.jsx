@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Container, Row, Col, Card, Carousel } from 'react-bootstrap';
+import { BsChevronLeft, BsChevronRight } from 'react-icons/bs';
 
 const Gallery = () => {
   // Sample data for images
@@ -34,16 +35,19 @@ const Gallery = () => {
 
   return (
     <Container className="gallery-cont mt-5">
-      <h1>Gallery</h1>
+      <h1 className="text-center">Gallery</h1>
       <Row>
-        <Col>
-          <Carousel>
+        <Col className="mt-5 mb-5">
+        <Carousel style= {{ overflow:"visible" }}
+            prevIcon={<BsChevronLeft className="carousel-arrow left-arrow" />}
+            nextIcon={<BsChevronRight className="carousel-arrow right-arrow" />}
+          >
             {groupedImages.map((imageGroup, index) => (
               <Carousel.Item key={index}>
                 <Row>
                   {imageGroup.map((image) => (
                     <Col xs={12} md={3} key={image.id} className="mb-3">
-                      <Card>
+                      <Card style= {{ backgroundColor:"#262b3df3", padding:"5px" }}>
                         <Card.Img variant="top" src={image.src} style={{ width: '100%', height: '200px' }} />
                       </Card>
                     </Col>
@@ -55,12 +59,9 @@ const Gallery = () => {
         </Col>
       </Row>
       <Row>
-        <h4 className="mt-1">
-          Click the Arrows to See Our Projects!
-        </h4>
-      </Row>
-      <Row>
-        <Link to="/reviews" className="mt-5 mb-5">Check Out Our Awesome Client Reviews Here.</Link>
+      <Col className="text-center mt-5 mb-5">
+          <Link to="/reviews" className="reviews-link" style= {{ fontWeight:"bold" }}>Check Out Our Client Reviews</Link>
+        </Col>
       </Row>
     </Container>
   );

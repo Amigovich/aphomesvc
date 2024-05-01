@@ -23,20 +23,20 @@ const Reviews = () => {
 
     return (
     <Container className="mt-5">
-    <h1 className="mt-5">Client Reviews</h1>
+    <h1 className="mt-5 text-center">Client Reviews</h1>
         <Row>
         {clientReviews.map((review) => (
-            <Col key={review.id} xs={12} className="mb-3">
-            <Card>
-                <Card.Body>
-                <Card.Title className='moreh5'>{review.name}</Card.Title>
-                <Card.Text style={{ fontStyle:"italic" }}>"{review.review}"</Card.Text>
+            <Col key={review.id} xs={12}>
+            <Card style= {{ border:"0px" }}>
+                <Card.Body className="reviewbox" style= {{ padding:"40px" }}>
+                <Card.Title style={{ color:"lightgrey" }} className='moreh5'>{review.name}</Card.Title>
+                <Card.Text style={{ fontStyle:"italic", color:"white" }}>"{review.review}"</Card.Text>
                 </Card.Body>
             </Card>
             </Col>
         ))}
         </Row>
-        <Row className="justify-content-center mt-3">
+        <Row className="justify-content-center">
     <Col xs={6} md={4}>
     <Button
     variant="outline-primary"
