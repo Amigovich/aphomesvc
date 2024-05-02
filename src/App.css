@@ -71,60 +71,6 @@ p {
 
 /* Header styles */
 
-.active-line1 {
-  position: absolute;
-  bottom: 0px;
-  left: 15.7%;
-  width: 10%;
-  height: 4px;
-  background-color: rgb(0, 102, 255);
-}
-
-.active-line2 {
-  position: absolute;
-  bottom: 0px;
-  left: 28.2%;
-  width: 11%;
-  height: 4px;
-  background-color: rgb(0, 102, 255);
-}
-
-.active-line3 {
-  position: absolute;
-  bottom: 0px;
-  left: 42.5%;
-  width: 13%;
-  height: 4px;
-  background-color: rgb(0, 102, 255);
-}
-
-.active-line4 {
-  position: absolute;
-  bottom: 0px;
-  left: 58.6%;
-  width: 11%;
-  height: 4px;
-  background-color: rgb(0, 102, 255);
-}
-
-.active-line5 {
-  position: absolute;
-  bottom: 0px;
-  left: 71.9%;
-  width: 11%;
-  height: 4px;
-  background-color: rgb(0, 102, 255);
-}
-
-.active-line6 {
-  position: absolute;
-  bottom: 0px;
-  left: 85.5%;
-  width: 12%;
-  height: 4px;
-  background-color: rgb(0, 102, 255);
-}
-
 .header {
   position: sticky;
   top: 0;
@@ -150,6 +96,28 @@ p {
   align-items: center;
   justify-content: space-between;
   margin-right: 60px;
+  padding-top: 47px;
+  padding-bottom: 47px;
+}
+
+.header .nav-link.active {
+  border-bottom: 4px solid rgb(0, 102, 255) !important;
+  width: 69%;
+}
+
+.header .homenav.active {
+  border-bottom: 4px solid rgb(0, 102, 255) !important;
+  width: 62%;
+}
+
+.header .parnav.active {
+  border-bottom: 4px solid rgb(0, 102, 255) !important;
+  width: 80%;
+}
+
+.header .abtnav.active {
+  border-bottom: 4px solid rgb(0, 102, 255) !important;
+  width: 85%;
 }
 
 .header .navbar {
@@ -170,19 +138,125 @@ p {
   color: white; /* Accent color */
 }
 
-@media (max-width: 1270px) {
-  /* Apply styles for screens smaller than 768px */
-  .navbar-toggler {
-    display: block;
+.parnav {
+  margin-right: 70px !important;
+}
+
+@media (max-width: 1451px) {
+  .parnav {
+    margin-right: 100px !important;
+  }
+}
+
+@media (max-width: 1300px) {
+
+  .header .nav-link {
+    font-size: 20px !important;
+    padding-top: 54.5px;
+    padding-bottom: 54px;
   }
 
-  .navbar-collapse {
+  .parnav {
+    margin-right: 65px !important;
+  }
+
+  .header .nav-link.active {
+    border-bottom: 4px solid rgb(0, 102, 255) !important;
+    width: 61%;
+  }
+  
+  .header .homenav.active {
+    border-bottom: 4px solid rgb(0, 102, 255) !important;
+    width: 54%;
+  }
+  
+  .header .parnav.active {
+    border-bottom: 4px solid rgb(0, 102, 255) !important;
+    width: 79%;
+  }
+  
+  .header .abtnav.active {
+    border-bottom: 4px solid rgb(0, 102, 255) !important;
+    width: 72%;
+  }
+
+  .header .galnav.active {
+    border-bottom: 4px solid rgb(0, 102, 255) !important;
+    width: 58%;
+  }
+}
+
+@media (max-width: 1072px) {
+  .header .nav-link {
+    font-size: 17px !important;
+    padding-top: 57px;
+    padding-bottom: 56px;
+  }
+}
+
+@media (max-width: 991px) {
+  .header .nav-link {
+    font-size: 25px !important;
+    margin-left: 10%;
+    justify-content: center !important;
+    width: 80%;
+    padding: 5px;
+  }
+
+  .header .nav-link.active {
+    font-size: 25px !important;
+    margin-left: 10%;
+    justify-content: center !important;
+    width: 80%;
+    padding: 5px;
+  }
+
+  .active-line1,
+  .active-line2,
+  .active-line3,
+  .active-line4,
+  .active-line5,
+  .active-line6 {
     display: none;
   }
 
-  .navbar-collapse.show {
+  .carousel-indicators2 {
+    position: relative;
     display: flex;
+    bottom: 16%;
+    left: 40% !important;
+    width: 100%;
+    z-index: 15;
+    text-align: center;
+    overflow: hidden !important;
+    padding: 0;
+  }
+
+  .nav-grid {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important; /* 3 columns */
+    grid-template-rows: repeat(2, auto) !important; /* 2 rows */
     justify-content: center !important;
+  }
+
+  .header .nav-link.active {
+    border: none !important;
+  }
+  
+  .header .homenav.active {
+    border: none !important;
+  }
+  
+  .header .parnav.active {
+    border: none !important;
+  }
+  
+  .header .abtnav.active {
+    border: none !important;
+  }
+
+  .header .galnav.active {
+    border: none !important;
   }
 }
 
@@ -407,9 +481,10 @@ margin-top: 60px;
 }
 
 .carousel-indicators2 {
-  position: fixed;
-  top: 76%;
-  left: 0%;
+  position: relative;
+  display: flex;
+  bottom: 16%;
+  left: 45%;
   width: 100%;
   z-index: 15;
   text-align: center;
@@ -440,8 +515,30 @@ margin-top: 60px;
 }
 
 @media (max-width: 1399px) {
-  .carousel-indicators2 { 
-    top: 81%;
+  .carousel-indicators2 {
+    position: relative;
+    display: flex;
+    bottom: 16%;
+    left: 44%;
+    width: 100%;
+    z-index: 15;
+    text-align: center;
+    overflow: hidden !important;
+    padding: 0;
+  }
+}
+
+@media (max-width: 1199px) {
+  .carousel-indicators2 {
+    position: relative;
+    display: flex;
+    bottom: 16%;
+    left: 43%;
+    width: 100%;
+    z-index: 15;
+    text-align: center;
+    overflow: hidden !important;
+    padding: 0;
   }
 }
 
@@ -449,7 +546,7 @@ margin-top: 60px;
   .carousel-indicators2 {
     position: relative !important;
     top: -13px;
-    left: 15%;
+    left: 38% !important;
     z-index: 15;
     text-align: center;
     width: 67%;
@@ -564,12 +661,15 @@ margin-top: 60px;
 }
 
 .carousel-indicators {
-  position: fixed;
-  top: 70%;
-  width: 70%;
+  position: relative;
+  display: flex;
+  bottom: 25% !important;
+  left: 20% !important;
+  width: 30%;
   z-index: 15;
   text-align: center;
   overflow: hidden !important;
+  padding: 0;
 }
 
 .carousel-indicators li {
@@ -597,11 +697,14 @@ margin-top: 60px;
 @media (max-width: 767px) {
   .carousel-indicators {
     position: relative !important;
-    top: -10px;
-    left: 40%;
+    display: flex;
+    bottom: 1% !important;
+    left: 20% !important;
+    width: 30%;
     z-index: 15;
     text-align: center;
-    width: 67%;
+    overflow: hidden !important;
+    padding: 0;
   }
 
   .carousel-indicators li {

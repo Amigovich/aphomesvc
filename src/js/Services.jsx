@@ -13,7 +13,7 @@ const Services = () => {
             <Card className="svc-card">
               <Card.Body className="svc-card2">
                 <Card.Title className='h5stuff text-center' style= {{ color:"white" }}>Replacement Doors</Card.Title>
-                <Card.Text className='text-center' style= {{ color:"lightgray" }}>Enhance the security and style of your home with replacement doors.</Card.Text>
+                <Card.Text className='text-center' style= {{ color:"lightgray" }}>Enhance the security and the style of your home with high-quality replacement doors.</Card.Text>
               </Card.Body>
             </Card>
           </Link>
