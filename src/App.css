@@ -365,6 +365,8 @@ margin-top: 60px;
 }
 
 .reviews-link2 {
+  position: relative;
+  z-index: 1000; 
   text-decoration: none; 
   font-size: 30px; 
   display: inline-block; 
@@ -381,6 +383,112 @@ margin-top: 60px;
   background-color: #303963b9 !important;
 }
 
+.carousel-arrow2 {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 3rem;
+}
+
+.left-arrow2 {
+  right: 120%;
+  color: grey;
+  background-color: #303963;
+  border-color: black;
+  border-radius: 12px;
+}
+
+.right-arrow2 {
+  left: 120%;
+  color: grey;
+  background-color: #303963;
+  border-color: black;
+  border-radius: 12px;
+}
+
+.carousel-indicators2 {
+  position: fixed;
+  top: 76%;
+  left: 0%;
+  width: 100%;
+  z-index: 15;
+  text-align: center;
+  overflow: hidden !important;
+  padding: 0;
+}
+
+.carousel-indicators2 li {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin: 0 3px;
+  text-indent: -999px;
+  cursor: pointer;
+  background-color: #262b3d91;
+  border: 1px solid #3d4c8a;
+  border-radius: 25%;
+  transition: opacity 0.6s ease;
+  overflow: hidden !important;
+}
+
+.carousel-indicators2 li.active {
+  background-color: rgb(32, 153, 223) !important;
+}
+
+.abt-gal {
+  margin-left: 1%;
+}
+
+@media (max-width: 1399px) {
+  .carousel-indicators2 { 
+    top: 81%;
+  }
+}
+
+@media (max-width: 767px) {
+  .carousel-indicators2 {
+    position: relative !important;
+    top: -13px;
+    left: 15%;
+    z-index: 15;
+    text-align: center;
+    width: 67%;
+  }
+
+  .carousel-indicators2 li {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin: 0 3px;
+    text-indent: -999px;
+    cursor: pointer;
+    background-color: #262b3d91;
+    border: 1px solid #3d4c8a;
+    border-radius: 25%;
+    transition: opacity 0.6s ease;
+  }
+
+  .carousel-indicators2 li.active {
+    background-color: rgb(32, 153, 223) !important;
+  }
+
+  .carousel-arrow2 {
+    position: absolute;
+    top: 1115px;
+    left: 20px;
+    right: 20px;
+    margin: 0 auto;
+  }
+
+  .left-arrow2 {
+    left: 0;
+  }
+
+  .right-arrow2 {
+    right: 0;
+  }
+}
+
 /* Gallery Styles */
 
 .gallery-cont {
@@ -388,7 +496,6 @@ margin-top: 60px;
 }
 
 .gallery-button {
-  margin-bottom: 70px;
   margin-left: 45%;
   background-color: #303963 !important;
 }
@@ -436,6 +543,10 @@ margin-top: 60px;
 }
 
 .reviews-link {
+  position: relative;
+  z-index: 1000; 
+  margin-top: -22px !important;
+  margin-bottom: 18px;
   text-decoration: none; 
   font-size: 30px; 
   display: inline-block; 
@@ -450,6 +561,81 @@ margin-top: 60px;
 .reviews-link:hover {
   color: rgb(32, 153, 223);
   background-color: #303963b9 !important;
+}
+
+.carousel-indicators {
+  position: fixed;
+  top: 70%;
+  width: 70%;
+  z-index: 15;
+  text-align: center;
+  overflow: hidden !important;
+}
+
+.carousel-indicators li {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin: 0 3px;
+  text-indent: -999px;
+  cursor: pointer;
+  background-color: #262b3d91;
+  border: 1px solid #3d4c8a;
+  border-radius: 25%;
+  transition: opacity 0.6s ease;
+  overflow: hidden !important;
+}
+
+.carousel-indicators li:hover {
+  background-color: rgb(32, 153, 223) !important;
+}
+
+.carousel-indicators li.active {
+  background-color: rgb(32, 153, 223) !important;
+}
+
+@media (max-width: 767px) {
+  .carousel-indicators {
+    position: relative !important;
+    top: -10px;
+    left: 40%;
+    z-index: 15;
+    text-align: center;
+    width: 67%;
+  }
+
+  .carousel-indicators li {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin: 0 3px;
+    text-indent: -999px;
+    cursor: pointer;
+    background-color: #262b3d91;
+    border: 1px solid #3d4c8a;
+    border-radius: 25%;
+    transition: opacity 0.6s ease;
+  }
+
+  .carousel-indicators li.active {
+    background-color: rgb(32, 153, 223) !important;
+  }
+
+  .carousel-arrow {
+    position: absolute;
+    top: 1520px;
+    left: 20px;
+    right: 20px;
+    margin: 0 auto;
+  }
+
+  .left-arrow {
+    left: 0;
+  }
+
+  .right-arrow {
+    right: 0;
+  }
 }
 
 /* home styles */

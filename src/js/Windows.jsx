@@ -75,8 +75,8 @@ const Windows = () => {
         <p className="mb-5 text-center">Ready to upgrade your home? Contact AP Home Services today for a consultation and start enjoying the benefits of beautiful, functional, and energy-efficient windows.</p>
       </Container>
       <div className="text-center mt-5">
-        <Link to="/services" className="btn btn-primary mr-2">Back</Link>
         <Link to="/estimate" className="btn btn-primary ml-2">Contact</Link>
+        <Link to="/services" className="btn btn-primary mr-2">Back</Link>
       </div>
     </div>
   );

@@ -1,10 +1,12 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { Link } from 'react-router-dom';
 import { Container, Row, Col, Card, Carousel } from 'react-bootstrap';
 import { BsChevronLeft, BsChevronRight } from 'react-icons/bs';
 
 const Gallery = () => {
-  // Sample data for images
+
+  const [activeIndex, setActiveIndex] = useState(0);
+
   const images = [
     { id: 1, src: './IMG_20231207_105942947_HDR.jpg'},
     { id: 2, src: './IMG_20231207_133443881_HDR.jpg'},
@@ -33,22 +35,30 @@ const Gallery = () => {
     groupedImages.push(images.slice(i, i + 4));
   }
 
+  const handleSlideChange = (selectedIndex) => {
+    setActiveIndex(selectedIndex);
+  };
+
   return (
     <Container className="gallery-cont mt-5">
       <h1 className="text-center">Gallery</h1>
       <Row>
-        <Col className="mt-5 mb-5">
-        <Carousel style= {{ overflow:"visible" }}
+        <Col className="mt-3 mb-5">
+          <Carousel 
+            activeIndex={activeIndex}
+            onSelect={handleSlideChange}
+            interval={5000}
             prevIcon={<BsChevronLeft className="carousel-arrow left-arrow" />}
             nextIcon={<BsChevronRight className="carousel-arrow right-arrow" />}
+            indicators={false}
           >
             {groupedImages.map((imageGroup, index) => (
               <Carousel.Item key={index}>
                 <Row>
                   {imageGroup.map((image) => (
-                    <Col xs={12} md={3} key={image.id} className="mb-3">
-                      <Card style= {{ backgroundColor:"#262b3df3", padding:"5px" }}>
-                        <Card.Img variant="top" src={image.src} style={{ width: '100%', height: '200px' }} />
+                    <Col xs={12} md={3} key={image.id} className="mb-5">
+                      <Card style={{ backgroundColor: "#262b3df3", padding: "5px" }}>
+                        <Card.Img variant="top" src={image.src} style={{ width: '100%', height: '300px' }} />
                       </Card>
                     </Col>
                   ))}
@@ -56,11 +66,20 @@ const Gallery = () => {
               </Carousel.Item>
             ))}
           </Carousel>
+            <ol className="carousel-indicators">
+              {groupedImages.map((_, index) => (
+                <li
+                  key={index}
+                  onClick={() => handleSlideChange(index)}
+                  className={activeIndex === index ? 'active' : ''}
+                />
+              ))}
+            </ol>
         </Col>
       </Row>
       <Row>
-      <Col className="text-center mt-5 mb-5">
-          <Link to="/reviews" className="reviews-link" style= {{ fontWeight:"bold" }}>Check Out Our Client Reviews</Link>
+        <Col className="text-center">
+          <Link to="/reviews" className="reviews-link" style={{ fontWeight: "bold" }}>Check Out Our Client Reviews!</Link>
         </Col>
       </Row>
     </Container>

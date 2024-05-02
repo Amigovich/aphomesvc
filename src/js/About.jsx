@@ -1,9 +1,11 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { Link } from 'react-router-dom';
 import { Container, Row, Col, Card, Carousel } from 'react-bootstrap';
 import { BsChevronLeft, BsChevronRight } from 'react-icons/bs';
 
 function About() {
+
+  const [activeIndex, setActiveIndex] = useState(0);
 
   const images = [
     { id: 1, src: './IMG_20231207_105942947_HDR.jpg'},
@@ -33,6 +35,9 @@ function About() {
     groupedImages.push(images.slice(i, i + 4));
   }
 
+  const handleSlideChange = (selectedIndex) => {
+    setActiveIndex(selectedIndex);
+  };
 
   return (
     <section id="about" className="about-content">
@@ -47,32 +52,45 @@ function About() {
               We are located in the Twin Cities area, serving the metro with dedication.
             </p>
           </Col>
-          <Row className="mt-4">
-          <Col xs={12} md={12}>
-          <Carousel style= {{ overflow:"visible" }}
-            prevIcon={<BsChevronLeft className="carousel-arrow left-arrow" />}
-            nextIcon={<BsChevronRight className="carousel-arrow right-arrow" />}
-          >
-            {groupedImages.map((imageGroup, index) => (
-              <Carousel.Item key={index}>
-                <Row>
-                  {imageGroup.map((image) => (
-                    <Col xs={12} md={3} key={image.id} className="mb-5">
-                      <Card style= {{ backgroundColor:"#262b3df3", padding:"5px" }}>
-                        <Card.Img variant="top" src={image.src} style={{ width: '100%', height: '200px' }} />
-                      </Card>
-                    </Col>
-                  ))}
-                </Row>
-              </Carousel.Item>
-            ))}
-          </Carousel>
+          <Row className="mt-4 text-center">
+          <Col xs={12} md={12} className="abt-gal">
+            <Carousel
+              activeIndex={activeIndex}
+              onSelect={handleSlideChange}
+              interval={5000}
+              prevIcon={<BsChevronLeft className="carousel-arrow2 left-arrow2" />}
+              nextIcon={<BsChevronRight className="carousel-arrow2 right-arrow2" />}
+              indicators={false}
+            >
+              {groupedImages.map((imageGroup, index) => (
+                <Carousel.Item key={index}>
+                  <Row>
+                    {imageGroup.map((image) => (
+                      <Col xs={12} md={3} key={image.id} className="mb-5">
+                        <Card style= {{ backgroundColor:"#262b3df3", padding:"5px" }}>
+                          <Card.Img variant="top" src={image.src} style={{ width: '100%', height: '200px' }} />
+                        </Card>
+                      </Col>
+                    ))}
+                  </Row>
+                </Carousel.Item>
+              ))}
+            </Carousel>
+            <ol className="carousel-indicators2">
+              {groupedImages.map((_, index) => (
+                <li
+                  key={index}
+                  onClick={() => handleSlideChange(index)}
+                  className={activeIndex === index ? 'active' : ''}
+                />
+              ))}
+            </ol>
           </Col>
       </Row>
         </Row>
         <Row className="justify-content-center">
           <Col xs={12} md={12} className="text-center">
-          <Link to="/estimate" className="reviews-link2" style={{ fontSize:"30px", fontWeight:"bold" }}>Click Here to Contact Us!</Link>
+            <Link to="/estimate" className="reviews-link2" style={{ fontSize:"30px", fontWeight:"bold" }}>Click Here to Contact Us!</Link>
           </Col>
         </Row>
       </Container>

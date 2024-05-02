@@ -36,14 +36,14 @@ const Reviews = () => {
             </Col>
         ))}
         </Row>
-        <Row className="justify-content-center">
+        <Row className="justify-content-center mt-4">
     <Col xs={6} md={4}>
     <Button
     variant="outline-primary"
     href={googleReviewsLink}
     target="_blank"
     rel="noopener noreferrer"
-    className="gallery-button"
+    className="gallery-button mb-4"
     style={{ width: '200px', fontSize: '20px', color: 'white', display: 'flex', justifyContent: 'center' }}>
         <span>
         {Array.from('Google').map((letter, index) => (

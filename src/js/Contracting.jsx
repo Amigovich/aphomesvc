@@ -39,8 +39,8 @@ const Contracting = () => {
       </Row>
       </Container>
       <div className="text-center mt-5">
-        <Link to="/services" className="btn btn-primary mr-2">Back</Link>
         <Link to="/estimate" className="btn btn-primary ml-2">Contact</Link>
+        <Link to="/services" className="btn btn-primary mr-2">Back</Link>
       </div>
     </div>
   );
