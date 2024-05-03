@@ -290,6 +290,12 @@ p {
   color: rgb(32, 153, 223)!important;
 }
 
+@media (max-width: 520px) {
+  .middle {
+    display: none !important;
+  }
+}
+
 /* partners styles */
 
 .partners-container {
@@ -365,6 +371,16 @@ margin-top: 60px;
 
 .foot-cont:hover {
   color: rgb(32, 153, 223)!important;
+}
+
+.dtlink:hover {
+  color: rgb(32, 153, 223)!important;
+}
+
+@media (max-width: 982px) {
+  .foot-right {
+    display: none !important;
+  }
 }
 
 /* Button styles */
@@ -956,6 +972,7 @@ margin-top: 60px;
 }
 
 .footer .nav-link,
-.footer .nav-link:hover {
+.footer .nav-link:hover,
+.footer .dtlink:hover {
   transition: color 0.4s ease;
 }
