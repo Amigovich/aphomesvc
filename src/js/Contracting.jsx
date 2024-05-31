@@ -13,12 +13,11 @@ const Contracting = () => {
   <h2 className="text-center mt-4 mb-4" style= {{ color:"white" }}>Our Services:</h2>
   <ul className="mb-3 text-center">
     <p className="benp1">Interior and Exterior Renovations</p>
-    <p className="benp1">Home Repairs and Maintenance</p>
     <p className="benp1">Deck and Patio Installation</p>
     <p className="benp1">Room Additions</p>
     <p className="benp1">Window and Door Installation</p>
     <p className="benp1">Roofing and Siding</p>
-    <p className="benp1">And More!</p>
+    
   </ul>
 </Col>
 <Col md={7} className="mb-3 cont-right">
