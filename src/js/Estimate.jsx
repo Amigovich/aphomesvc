@@ -139,6 +139,9 @@ function Estimate() {
         </div>
     )}
     </Form>
+                    <p style={{ color: "lightgray", marginTop: '20px' }}>For more information, you can also contact us at:</p>
+                    <p style={{ color: "lightgray" }}>Phone: 612-208-7271</p>
+                    <p style={{ color: "lightgray" }}>Email: info@aphomesvc.com</p>
         </section>
         </div>
         </div>
