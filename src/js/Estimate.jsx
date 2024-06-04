@@ -76,13 +76,13 @@ function Estimate() {
         <Col md={6}>
         <Form.Group controlId="name">
             <Form.Label style={{ width: '100%', fontFamily: 'Cuprum', fontSize: '20px', color:"lightgray" }}>Name:</Form.Label>
-            <Form.Control style={{ fontFamily: 'Cuprum' }} type="text" placeholder="Enter your name" required autoComplete="name" />
+            <Form.Control style={{ fontFamily: 'Cuprum' }} type="text" placeholder="Name" required autoComplete="name" />
         </Form.Group>
         </Col>
         <Col md={6}>
         <Form.Group controlId="email">
             <Form.Label style={{ width: '100%', fontFamily: 'Cuprum', fontSize: '20px', color:"lightgray"  }}>Email:</Form.Label>
-            <Form.Control style={{ fontFamily: 'Cuprum' }} type="email" placeholder="Enter your email" required autoComplete="email" />
+            <Form.Control style={{ fontFamily: 'Cuprum' }} type="email" placeholder="Email" required autoComplete="email" />
         </Form.Group>
         </Col>
     </Row>
@@ -90,13 +90,13 @@ function Estimate() {
         <Col md={6}>
         <Form.Group controlId="phone">
             <Form.Label style={{ width: '100%', fontFamily: 'Cuprum', fontSize: '20px', color:"lightgray"  }}>Phone:</Form.Label>
-            <Form.Control style={{ fontFamily: 'Cuprum' }} type="text" placeholder="Enter your phone number" required autoComplete="tel" />
+            <Form.Control style={{ fontFamily: 'Cuprum' }} type="text" placeholder="Phone number" required autoComplete="tel" />
         </Form.Group>
         </Col>
         <Col md={6}>
         <Form.Group controlId="address">
             <Form.Label style={{ width: '100%', fontFamily: 'Cuprum', fontSize: '20px', color:"lightgray"  }}>Address:</Form.Label>
-            <Form.Control style={{ fontFamily: 'Cuprum' }} type="text" placeholder="Enter your address" required autoComplete="street-address" />
+            <Form.Control style={{ fontFamily: 'Cuprum' }} type="text" placeholder="Address" required autoComplete="street-address" />
         </Form.Group>
         </Col>
     </Row>
