@@ -31,43 +31,43 @@ const HomePage = () => {
                                 <Row className="mb-3">
                                     <Col xs={6}>
                                         <Form.Group controlId="name">
-                                            <Form.Control style={{ fontFamily: 'Cuprum' }} type="text" placeholder="Enter your name" required />
+                                            <Form.Control style={{ fontFamily: 'Cuprum' }} type="text" placeholder="Name" required />
                                         </Form.Group>
                                     </Col>
                                     <Col xs={6}>
                                         <Form.Group controlId="email">
-                                            <Form.Control style={{ fontFamily: 'Cuprum' }} type="email" placeholder="Enter your email" required />
+                                            <Form.Control style={{ fontFamily: 'Cuprum' }} type="email" placeholder="Email" required />
                                         </Form.Group>
                                     </Col>
                                 </Row>
                                 <Row className="mb-3">
                                     <Col xs={6}>
                                         <Form.Group controlId="phone">
-                                            <Form.Control style={{ fontFamily: 'Cuprum' }} type="tel" placeholder="Enter your phone number" required />
+                                            <Form.Control style={{ fontFamily: 'Cuprum' }} type="tel" placeholder="Phone number" required />
                                         </Form.Group>
                                     </Col>
                                     <Col xs={6}>
                                         <Form.Group controlId="address">
-                                            <Form.Control style={{ fontFamily: 'Cuprum' }} type="text" placeholder="Enter your address" required />
+                                            <Form.Control style={{ fontFamily: 'Cuprum' }} type="text" placeholder="Address" required />
                                         </Form.Group>
                                     </Col>
                                 </Row>
                                 <Row className="mb-3">
                                     <Col xs={6}>
                                         <Form.Group controlId="city">
-                                            <Form.Control style={{ fontFamily: 'Cuprum' }} type="text" placeholder="Enter your city" required />
+                                            <Form.Control style={{ fontFamily: 'Cuprum' }} type="text" placeholder="City" required />
                                         </Form.Group>
                                     </Col>
                                     <Col xs={6}>
                                         <Form.Group controlId="state">
-                                            <Form.Control style={{ fontFamily: 'Cuprum' }} type="text" placeholder="Enter your state" required />
+                                            <Form.Control style={{ fontFamily: 'Cuprum' }} type="text" placeholder="State" required />
                                         </Form.Group>
                                     </Col>
                                 </Row>
                                 <Row className="mb-3">
                                     <Col xs={6}>
                                         <Form.Group controlId="zipcode">
-                                            <Form.Control type="text" placeholder="Enter your zipcode" style={{ width: '100%', marginRight:"10px", fontFamily: 'Cuprum' }} required />
+                                            <Form.Control style={{ fontFamily: 'Cuprum' }} type="text" placeholder="Zipcode" required />
                                         </Form.Group>
                                     </Col>
                                     <Col xs={6}>
@@ -75,7 +75,7 @@ const HomePage = () => {
                                             <Form.Control as="select" style={{ width: '100%', fontFamily: 'Cuprum' }} required>
                                                 <option value="">Choose a Service</option>
                                                 <option value="window-replacement">Window Replacement</option>
-                                                <option value="door-installation">Door Installation</option>
+                                                <option value="door-installation">Door Replacement</option>
                                                 <option value="other">Other</option>
                                             </Form.Control>
                                         </Form.Group>
