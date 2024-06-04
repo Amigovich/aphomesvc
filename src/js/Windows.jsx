@@ -14,7 +14,7 @@ const Windows = () => {
     <div className="page-container">
       <Container className="mt-5">
         <h1 className="svc-title2 text-center">Windows Replacement And Installation with AP Home Services</h1>
-        <p className="text-center">Our trusted by industry-leading partners <a href="https://www.andersenwindows.com/windows-and-doors/doors/" target="_blank" rel="noopener noreferrer" style={{ textDecoration: "none" }}>Andersen</a>, <a href="https://www.marvin.com/products/doors" target="_blank" rel="noopener noreferrer" style={{ textDecoration: "none" }}>Marvin</a>, and <a href="https://www.kolbewindows.com/doors" target="_blank" rel="noopener noreferrer" style={{ textDecoration: "none" }}>Kolbe</a>. Our team is dedicated to improving your home's comfort, style, and energy efficiency. From selecting the right windows to expert installation, we're here to make the process smooth and stress-free.</p>
+        <p className="text-center">Our trusted by industry-leading partners <a href="https://www.andersenwindows.com/windows-and-doors/windows/" target="_blank" rel="noopener noreferrer" style={{ textDecoration: "none" }}>Andersen</a>, <a href="https://www.marvin.com/products/windows" target="_blank" rel="noopener noreferrer" style={{ textDecoration: "none" }}>Marvin</a>, and <a href="https://www.kolbewindows.com/windows" target="_blank" rel="noopener noreferrer" style={{ textDecoration: "none" }}>Kolbe</a>. Our team is dedicated to improving your home's comfort, style, and energy efficiency. From selecting the right windows to expert installation, we're here to make the process smooth and stress-free.</p>
         
         <Row className="mb-3 mt-5 justify-content-center">
           <Col md={6} className="mb-3">
