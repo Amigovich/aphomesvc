@@ -19,7 +19,7 @@ const Reviews = () => {
 ];
 
   // Link to Google reviews
-    const googleReviewsLink = 'https://www.google.com/';
+    const googleReviewsLink = 'https://g.page/r/CZcsvUY-MVY0EB0/review';
 
     return (
     <Container className="mt-5">
