@@ -14,4 +14,3 @@ const Header2 = () => {
 }
 
 export default Header2;
-
