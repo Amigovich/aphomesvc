@@ -8,7 +8,7 @@ const Header2 = () => {
             <NavLink to="/estimate" className="middle">
                 Click Here to Get A Free Quote
             </NavLink>
-
+            <a className="right">We Accept Credit Card</a>
         </header>
     );
 }
