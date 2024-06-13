@@ -7,7 +7,7 @@ function App() {
   console.log('App component rendered');
   return (
     <div className="app-container">
-      <BrowserRouter basename="/https://aphomesvc.com/">
+      <BrowserRouter basename="/https://aphomesvc.com">
         <Header2 />
         <Header />
         <Routes>
