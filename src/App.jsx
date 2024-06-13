@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { Header2, Header, Home, Partners, Reviews, About, Estimate, Gallery, Services, Footer, Windows, Doors, Contracting } from './js';
 
 function App() {
+  console.log('App component rendered');
   return (
     <div className="app-container">
       <BrowserRouter basename="/aphomesvc">
