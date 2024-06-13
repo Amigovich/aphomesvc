@@ -39,12 +39,17 @@ function Estimate() {
 
         emailjs
         .send(
-            //emailjs stuff//
+            'service_2xk6x8h', // replace with your EmailJS service ID
+            'template_dew9ghk', // replace with your EmailJS template ID
             {
-                from_name: name,
-                from_email: email,
-                message: message,
-            }, //emailjs//
+                name: name,
+                email: email,
+                phone: phone,
+                address: address,
+                services: services,
+                additionalServices: additionalServices
+            },
+            'uyL6jZwy3IC9rAeTK' // replace with your EmailJS user ID
         )
         .then(() => {
             console.log('Email sent successfully!');
