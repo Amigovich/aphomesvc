@@ -7,7 +7,7 @@ import { Header2, Header, Home, Partners, Reviews, About, Estimate, Gallery, Ser
 function App() {
   return (
     <div className="app-container">
-      <BrowserRouter basename=/aphomesvc/>
+      <BrowserRouter basename="/aphomesvc/">
         <Header2 />
         <Header />
         <Routes>
