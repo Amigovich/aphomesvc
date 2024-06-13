@@ -1,16 +1,22 @@
-import React, { useRef, useState } from 'react';
+ name: Deploy
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:import React, { useState } from 'react';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import emailjs from '@emailjs/browser';
+import emailjs from '@emailjs/browser'; // Use the optimized browser package
 import backgroundImage from '/homesimage.jpg';
 
-export const Estimate = () => {
-    const form = useRef();
+function Estimate() {
     const [showAlert, setShowAlert] = useState(false);
     const [isSubmitting, setIsSubmitting] = useState(false);
-
     const backgroundStyle = {
         backgroundImage: `url(${backgroundImage})`,
         backgroundSize: 'cover',
@@ -18,37 +24,56 @@ export const Estimate = () => {
         backgroundPosition: 'center',
     };
 
-    const sendEmail = (e) => {
-        e.preventDefault();
+    function handleSubmit(event) {
+        event.preventDefault();
 
         if (isSubmitting) {
             return;
         }
 
+        const name = event.target.elements.name.value;
+        const email = event.target.elements.email.value;
+        const phone = event.target.elements.phone.value;
+        const address = event.target.elements.address.value;
+        const services = event.target.elements.services.value;
+        const additionalServices = event.target.elements.additionalServices.value || '';
+
+        if (!name || !email || !phone || !address || !services) {
+            return;
+        }
+
         setIsSubmitting(true);
 
-        emailjs.sendForm(
-            'service_2xk6x8h', 
-            'template_dew9ghk', 
-            form.current, 
-            'TaE4PcgrDpJIVqZv6'
-        ).then(
-            () => {
+        emailjs
+            .send(
+                'service_2xk6x8h', // replace with your EmailJS service ID
+                'template_dew9ghk', // replace with your EmailJS template ID
+                {
+                    from_name: name,
+                    from_email: email,
+                    from_phone: phone,
+                    from_address: address,
+                    from_services: services,
+                    additional_services: additionalServices,
+                },
+                'TaE4PcgrDpJIVqZv6' // replace with your EmailJS user ID
+            )
+            .then(() => {
                 console.log('Email sent successfully!');
-                e.target.reset();
+                event.target.reset();
                 setShowAlert(true);
 
                 setTimeout(() => {
                     setShowAlert(false);
                 }, 3000);
-            },
-            (error) => {
+            })
+            .catch((error) => {
                 console.error('Error sending email:', error);
-            }
-        ).finally(() => {
-            setIsSubmitting(false);
-        });
-    };
+            })
+            .finally(() => {
+                setIsSubmitting(false);
+            });
+    }
 
     return (
         <div className="home-page" style={backgroundStyle}>
@@ -58,18 +83,18 @@ export const Estimate = () => {
                     <p style={{ color: "lightgray" }}>Ready to start your construction project with AP Home Services?</p>
                     <p style={{ color: "lightgray" }}>Interested in financing a project?</p>
                     <p style={{ color: "lightgray" }}>Contact us for a personalized consultation and a free quote today.</p>
-                    <Form ref={form} onSubmit={sendEmail}>
+                    <Form id="contactForm" onSubmit={handleSubmit}>
                         <Row className="mb-4">
                             <Col md={6}>
                                 <Form.Group controlId="name">
                                     <Form.Label style={{ width: '100%', fontFamily: 'Cuprum', fontSize: '20px', color: "lightgray" }}>Name:</Form.Label>
-                                    <Form.Control style={{ fontFamily: 'Cuprum' }} type="text" placeholder="Name" name="user_name" required autoComplete="name" />
+                                    <Form.Control style={{ fontFamily: 'Cuprum' }} type="text" placeholder="Name" required autoComplete="name" />
                                 </Form.Group>
                             </Col>
                             <Col md={6}>
                                 <Form.Group controlId="email">
                                     <Form.Label style={{ width: '100%', fontFamily: 'Cuprum', fontSize: '20px', color: "lightgray" }}>Email:</Form.Label>
-                                    <Form.Control style={{ fontFamily: 'Cuprum' }} type="email" placeholder="Email" name="user_email" required autoComplete="email" />
+                                    <Form.Control style={{ fontFamily: 'Cuprum' }} type="email" placeholder="Email" required autoComplete="email" />
                                 </Form.Group>
                             </Col>
                         </Row>
@@ -77,13 +102,13 @@ export const Estimate = () => {
                             <Col md={6}>
                                 <Form.Group controlId="phone">
                                     <Form.Label style={{ width: '100%', fontFamily: 'Cuprum', fontSize: '20px', color: "lightgray" }}>Phone:</Form.Label>
-                                    <Form.Control style={{ fontFamily: 'Cuprum' }} type="text" placeholder="Phone number" name="user_phone" required autoComplete="tel" />
+                                    <Form.Control style={{ fontFamily: 'Cuprum' }} type="text" placeholder="Phone number" required autoComplete="tel" />
                                 </Form.Group>
                             </Col>
                             <Col md={6}>
                                 <Form.Group controlId="address">
                                     <Form.Label style={{ width: '100%', fontFamily: 'Cuprum', fontSize: '20px', color: "lightgray" }}>Address:</Form.Label>
-                                    <Form.Control style={{ fontFamily: 'Cuprum' }} type="text" placeholder="Address" name="user_address" required autoComplete="street-address" />
+                                    <Form.Control style={{ fontFamily: 'Cuprum' }} type="text" placeholder="Address" required autoComplete="street-address" />
                                 </Form.Group>
                             </Col>
                         </Row>
@@ -91,7 +116,7 @@ export const Estimate = () => {
                             <Col md={6}>
                                 <Form.Group controlId="services">
                                     <Form.Label style={{ width: '100%', fontFamily: 'Cuprum', fontSize: '20px', color: "lightgray" }}>Services Requested:</Form.Label>
-                                    <Form.Control style={{ fontFamily: 'Cuprum' }} as="select" name="user_services" required autoComplete="off">
+                                    <Form.Control style={{ fontFamily: 'Cuprum' }} as="select" required autoComplete="off">
                                         <option value="">Select One</option>
                                         <option value="windows">Windows</option>
                                         <option value="roofing">Roofing</option>
@@ -105,7 +130,7 @@ export const Estimate = () => {
                             <Col md={6}>
                                 <Form.Group controlId="additionalServices">
                                     <Form.Label style={{ width: '130%', fontFamily: 'Cuprum', fontSize: '20px', color: "lightgray" }}>Details and/or Additional Services:</Form.Label>
-                                    <Form.Control style={{ fontFamily: 'Cuprum' }} type="text" placeholder="Enter additional services" name="additional_services" autoComplete="off" />
+                                    <Form.Control style={{ fontFamily: 'Cuprum' }} type="text" placeholder="Enter additional services" autoComplete="off" />
                                 </Form.Group>
                             </Col>
                         </Row>
@@ -130,6 +155,8 @@ export const Estimate = () => {
             </div>
         </div>
     );
-};
+}
 
 export default Estimate;
+
+   
