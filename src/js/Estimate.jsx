@@ -3,7 +3,7 @@ import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import emailjs from '@emailjs/browser';
+import emailjs from '@emailjs/browser'; 
 import backgroundImage from '/homesimage.jpg';
 
 function Estimate() {
@@ -30,7 +30,7 @@ function Estimate() {
         const services = event.target.elements.services.value;
         const additionalServices = event.target.elements.additionalServices.value;
 
-        if (!name || !email || !phone || !address || !services) {
+        if (!name || !email || !phone || !address || !services || !additionalServices) {
             return;
         }
 
@@ -38,8 +38,8 @@ function Estimate() {
 
         emailjs
         .send(
-            'service_2xk6x8h', 
-            'template_dew9ghk',
+            'service_2xk6x8h', // replace with your EmailJS service ID
+            'template_dew9ghk', // replace with your EmailJS template ID
             {
                 name: name,
                 email: email,
@@ -48,7 +48,7 @@ function Estimate() {
                 services: services,
                 additionalServices: additionalServices
             },
-            'TaE4PcgrDpJIVqZv6' 
+            'TaE4PcgrDpJIVqZv6' // replace with your EmailJS user ID
         )
         .then(() => {
             console.log('Email sent successfully!');
