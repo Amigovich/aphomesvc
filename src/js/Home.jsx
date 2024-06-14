@@ -1,12 +1,11 @@
 import React, { useRef, useState } from 'react';
-import { Row, Col, Form } from 'react-bootstrap';
+import { Row, Col, Form, Button } from 'react-bootstrap';
 import emailjs from '@emailjs/browser';
 import backgroundImage from '/homesimage.jpg';
 
 const HomePage = () => {
     const form = useRef();
     const [isSubmitting, setIsSubmitting] = useState(false);
-    const [showAlert, setShowAlert] = useState(false);
 
     const backgroundStyle = {
         backgroundImage: `url(${backgroundImage})`,
@@ -25,19 +24,14 @@ const HomePage = () => {
         setIsSubmitting(true);
 
         emailjs.sendForm(
-            'service_2xk6x8h', // Replace with your EmailJS service ID
-            'template_ivt5vg6', // Replace with your EmailJS template ID
-            form.current,
-            'TaE4PcgrDpJIVqZv6' // Replace with your EmailJS user ID
+            'service_2xk6x8h', 
+            'template_ivt5vg6', 
+            form.current, 
+            'TaE4PcgrDpJIVqZv6'
         ).then(
             () => {
                 console.log('Email sent successfully!');
                 e.target.reset();
-                setShowAlert(true);
-
-                setTimeout(() => {
-                    setShowAlert(false);
-                }, 3000);
             },
             (error) => {
                 console.error('Error sending email:', error);
@@ -53,8 +47,8 @@ const HomePage = () => {
                 <Col className="mt-5" md={6}>
                     <div className="mt-5 left-box">
                         <div className="mt-5 left-content">
-                            <h1 className="mt-5 text-center" style={{ color: "white", paddingLeft: "10px", paddingRight: "10px" }}>Welcome to AP Home Services</h1>
-                            <p className="homep text-center" style={{ color: "lightgray" }}>
+                            <h1 className="mt-5 text-center" style= {{ color:"white", paddingLeft:"10px", paddingRight:"10px" }}>Welcome to AP Home Services</h1>
+                            <p className="homep text-center" style= {{ color:"lightgray" }}>
                                 Your premier residential window and door replacement contractor! Ready to elevate your home with new windows and doors? Contact us today to schedule a free consultation. Our friendly and knowledgeable team is here to answer your questions, discuss your options, and provide you with a customized solution that fits your budget and lifestyle. Let's turn your house into the home of your dreams together!
                             </p>
                         </div>
@@ -63,8 +57,8 @@ const HomePage = () => {
                 <Col className="mt-5" md={6}>
                     <div className="mt-5 right-box">
                         <div className="mt-5 right-content">
-                            <h1 className="mt-5 text-center" style={{ color: "white" }}>Need a Free Estimate?</h1>
-                            <Form ref={form} onSubmit={sendEmail} className="home-form">
+                            <h1 className="mt-5 text-center"  style= {{ color:"white" }}>Need a Free Estimate?</h1>
+                            <Form ref={form} className="home-form" onSubmit={sendEmail}>
                                 <Row className="mb-3">
                                     <Col xs={6}>
                                         <Form.Group controlId="name">
@@ -126,21 +120,16 @@ const HomePage = () => {
                                     </Col>
                                 </Row>
                                 <Row className="mt-5">
-                                    <Col xs={3}>
-                                        <button type="submit" className="sendbtn btn-primary" style={{ width: "200px", fontFamily: 'Cuprum' }}>
+                                    <Col xs={12}>
+                                        <Button type="submit" className="sendbtn" style={{ width: '100%', fontFamily: 'Cuprum' }}>
                                             {isSubmitting ? (
                                                 <span className="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
                                             ) : (
                                                 <span>Send Quote Request</span>
                                             )}
-                                        </button>
+                                        </Button>
                                     </Col>
                                 </Row>
-                                {showAlert && (
-                                    <div className="alert-box alert-success mt-3" role="alert">
-                                        Message sent successfully!
-                                    </div>
-                                )}
                             </Form>
                         </div>
                     </div>
