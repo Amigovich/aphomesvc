@@ -125,6 +125,8 @@ const HomePage = () => {
                                         </Form.Group>
                                     </Col>
                                 </Row>
+                                {/* Hidden input to capture recipient email */}
+                                <input type="hidden" name="recipient_email" value={form.current ? form.current.user_email.value : ''} />
                                 <Row className="mt-5">
                                     <Col xs={3}>
                                         <button type="submit" className="sendbtn btn-primary" style={{ width: "200px", fontFamily: 'Cuprum' }}>
