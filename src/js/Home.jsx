@@ -12,6 +12,20 @@ const HomePage = () => {
         backgroundImage: `url(${backgroundImage})`,
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
+        backgroundPosition: 'center',import React, { useRef, useState } from 'react';
+import { Row, Col, Form } from 'react-bootstrap';
+import emailjs from '@emailjs/browser';
+import backgroundImage from '/homesimage.jpg';
+
+const HomePage = () => {
+    const form = useRef();
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [showAlert, setShowAlert] = useState(false);
+
+    const backgroundStyle = {
+        backgroundImage: `url(${backgroundImage})`,
+        backgroundSize: 'cover',
+        backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center',
     };
 
@@ -28,7 +42,7 @@ const HomePage = () => {
             'service_2xk6x8h', // Replace with your EmailJS service ID
             'template_ivt5vg6', // Replace with your EmailJS template ID
             form.current,
-            'service_2xk6x8h' // Replace with your EmailJS user ID
+            'TaE4PcgrDpJIVqZv6' // Replace with your EmailJS user ID
         ).then(
             () => {
                 console.log('Email sent successfully!');
@@ -151,5 +165,9 @@ const HomePage = () => {
         </div>
     );
 }
+
+export default HomePage;
+
+
 
 export default HomePage;
