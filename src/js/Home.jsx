@@ -12,20 +12,6 @@ const HomePage = () => {
         backgroundImage: `url(${backgroundImage})`,
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
-        backgroundPosition: 'center',import React, { useRef, useState } from 'react';
-import { Row, Col, Form } from 'react-bootstrap';
-import emailjs from '@emailjs/browser';
-import backgroundImage from '/homesimage.jpg';
-
-const HomePage = () => {
-    const form = useRef();
-    const [isSubmitting, setIsSubmitting] = useState(false);
-    const [showAlert, setShowAlert] = useState(false);
-
-    const backgroundStyle = {
-        backgroundImage: `url(${backgroundImage})`,
-        backgroundSize: 'cover',
-        backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center',
     };
 
@@ -139,8 +125,6 @@ const HomePage = () => {
                                         </Form.Group>
                                     </Col>
                                 </Row>
-                                {/* Hidden input to capture recipient email */}
-                                <input type="hidden" name="recipient_email" value={form.current ? form.current.user_email.value : ''} />
                                 <Row className="mt-5">
                                     <Col xs={3}>
                                         <button type="submit" className="sendbtn btn-primary" style={{ width: "200px", fontFamily: 'Cuprum' }}>
@@ -165,9 +149,5 @@ const HomePage = () => {
         </div>
     );
 }
-
-export default HomePage;
-
-
 
 export default HomePage;
