@@ -1,13 +1,13 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { HashRouter, Route, Routes } from 'react-router-dom';
 import { Header2, Header, Home, Partners, Reviews, About, Estimate, Gallery, Services, Footer, Windows, Doors, Contracting } from './js';
 
 function App() {
   console.log('App component rendered');
   return (
     <div className="app-container">
-      <BrowserRouter basename="/">
+      <HashRouter basename="/aphomesvc">
         <Header2 />
         <Header />
         <Routes>
@@ -24,7 +24,7 @@ function App() {
           <Route path="services" element={<Services />} />
         </Routes>
         <Footer />
-      </BrowserRouter>
+      </HashRouter>
     </div>
   );
 }
