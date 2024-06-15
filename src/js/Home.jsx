@@ -133,7 +133,7 @@ const HomePage = () => {
                                             {isSubmitting ? (
                                                 <span className="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
                                             ) : (
-                                                <span>Send Quote Request</span>
+                                                <span>Send Free Estimate Request</span>
                                             )}
                                         </button>
                                     </Col>
