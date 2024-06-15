@@ -28,13 +28,12 @@ const Header2 = () => {
                         cursor: 'pointer'
                     }}
                 >
-                    Book an Appointment
+                    Book Free Consultation
                 </button>
             </div>
             <NavLink to="/estimate" className="middle">
                 Click Here to Get A Free Quote
             </NavLink>
-            <div className="right">We Accept Credit Card</div>
         </header>
     );
 }
