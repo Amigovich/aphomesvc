@@ -21,9 +21,10 @@ function App() {
           <Route path="partners" element={<Partners />} />
           <Route path="reviews" element={<Reviews />} />
           <Route path="estimate" element={<Estimate />} />
+          <Route path="/contactus" element={<ContactUs />} />
           <Route path="gallery" element={<Gallery />} />
           <Route path="services" element={<Services />} />
-          <Route path="/contact-us" component={ContactUs} />
+         
         </Routes>
         <Footer />
       </BrowserRouter>
