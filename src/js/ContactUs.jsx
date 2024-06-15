@@ -71,7 +71,7 @@ export const ContactUs = () => {
                             <Col md={12}>
                                 <Form.Group controlId="message">
                                     <Form.Label style={{ width: '100%', fontFamily: 'Cuprum', fontSize: '20px', color: "lightgray" }}>Your Message:</Form.Label>
-                                    <Form.Control style={{ fontFamily: 'Cuprum' }} as="textarea" rows={5} placeholder="Your Message" name="user_message" required />
+                                    <Form.Control style={{ fontFamily: 'Cuprum' }} as="textarea" rows={5} placeholder="Your Message" name="user_service_message" required />
                                 </Form.Group>
                             </Col>
                         </Row>
