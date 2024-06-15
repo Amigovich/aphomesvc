@@ -2,7 +2,7 @@ import './App.css';
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import { Header2, Header, Home, Partners, Reviews, About, Estimate, Gallery, Services, Footer, Windows, Doors, Contracting } from './js';
+import { Header2, Header, Home, Partners, Reviews, About, Estimate, ContactUs, Gallery, Services, Footer, Windows, Doors, Contracting } from './js';
 
 function App() {
   console.log('App component rendered');
@@ -23,6 +23,7 @@ function App() {
           <Route path="estimate" element={<Estimate />} />
           <Route path="gallery" element={<Gallery />} />
           <Route path="services" element={<Services />} />
+          <Route path="/contact-us" component={ContactUs} />
         </Routes>
         <Footer />
       </BrowserRouter>
