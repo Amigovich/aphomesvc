@@ -22,7 +22,7 @@ function Footer() {
                 <Nav className="thisone">
                     <Nav.Link as={Link} to="/ContactUs" className="foot-cont" style={{ textDecoration: 'none', color: 'white' }}>Contact Us</Nav.Link>
                 </Nav>
-                <Navbar.Text className="ml-auto foot-right" style={{ textDecoration: 'none', color: 'white' }}>Site & Design by&nbsp;<a className="dtlink" style= {{ textDecoration:"none", fontFamily:"Arial", color:"white" }} href="https://www.linkedin.com/in/damon-tweedy-296737291/" target="_blank" rel="noopener noreferrer">DT</a>. &nbsp;&nbsp;&copy; {new Date().getFullYear()} AP Home Services.&nbsp;&nbsp; All rights reserved.&nbsp;&nbsp; MN License #BC807818</Navbar.Text>
+                <Navbar.Text className="ml-auto foot-right" style={{ textDecoration: 'none', color: 'white' }} &nbsp;&nbsp;&copy; {new Date().getFullYear()} AP Home Services.&nbsp;&nbsp; All rights reserved.&nbsp;&nbsp; MN License #BC807818</Navbar.Text>
             </Navbar>
         </footer>
     );
