@@ -90,7 +90,7 @@ function About() {
         </Row>
         <Row className="justify-content-center">
           <Col xs={12} md={12} className="text-center">
-            <Link to="/estimate" className="reviews-link2" style={{ fontSize:"30px", fontWeight:"bold" }}>Click Here to Contact Us!</Link>
+            <Link to="/ContactUs" className="reviews-link2" style={{ fontSize:"30px", fontWeight:"bold" }}>Click Here to Contact Us!</Link>
           </Col>
         </Row>
       </Container>
