@@ -103,11 +103,11 @@ export const Estimate = () => {
                             </Col>
                             <Col md={6}>
                                 <Form.Group controlId="additionalServices">
-                                    <Form.Label style={{ width: '100%', fontFamily: 'Cuprum', fontSize: '20px', color: "lightgray" }}>Details and/or Additional Services:</Form.Label>
+                                    <Form.Label style={{ width: '100%', fontFamily: 'Cuprum', fontSize: '20px', color: "lightgray" }}>Comments or Questions:</Form.Label>
                                     <Form.Control 
                                         style={{ fontFamily: 'Cuprum', height: '150px', resize: 'vertical' }} 
                                         as="textarea" 
-                                        placeholder="Enter additional services or your message here" 
+                                        placeholder="Enter comments or questions you have..." 
                                         name="additional_services" 
                                         autoComplete="off" 
                                     />
