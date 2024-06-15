@@ -91,7 +91,7 @@ export const Estimate = () => {
                             <Col md={6}>
                                 <Form.Group controlId="services">
                                     <Form.Label style={{ width: '100%', fontFamily: 'Cuprum', fontSize: '20px', color: "lightgray" }}>Services Requested:</Form.Label>
-                                    <Form.Control style={{ fontFamily: 'Cuprum' }} as="select" name="user_services" required autoComplete="off">
+                                    <Form.Control style={{ fontFamily: 'Cuprum' }} as="select" name="user_message" required autoComplete="off">
                                         <option value="">Select One</option>
                                         <option value="windows">Windows</option>
                                         <option value="roofing">Roofing</option>
