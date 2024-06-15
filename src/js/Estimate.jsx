@@ -54,10 +54,9 @@ export const Estimate = () => {
         <div className="home-page" style={backgroundStyle}>
             <div className="mid-box">
                 <section id="estimate" className="content">
-                    <h1 className="mt-5" style={{ color: "white" }}>Contact Us</h1>
+                    <h1 className="mt-5" style={{ color: "white" }}>Send Us Free Estimate Request</h1>
                     <p style={{ color: "lightgray" }}>Ready to start your construction project with AP Home Services?</p>
-                    <p style={{ color: "lightgray" }}>Interested in financing a project?</p>
-                    <p style={{ color: "lightgray" }}>Contact us for a personalized consultation and a free quote today.</p>
+                    <p style={{ color: "lightgray" }}>Contact us for a personalized consultation.</p>
                     <Form ref={form} onSubmit={sendEmail}>
                         <Row className="mb-4">
                             <Col md={6}>
@@ -104,8 +103,14 @@ export const Estimate = () => {
                             </Col>
                             <Col md={6}>
                                 <Form.Group controlId="additionalServices">
-                                    <Form.Label style={{ width: '130%', fontFamily: 'Cuprum', fontSize: '20px', color: "lightgray" }}>Details and/or Additional Services:</Form.Label>
-                                    <Form.Control style={{ fontFamily: 'Cuprum' }} type="text" placeholder="Enter additional services" name="additional_services" autoComplete="off" />
+                                    <Form.Label style={{ width: '100%', fontFamily: 'Cuprum', fontSize: '20px', color: "lightgray" }}>Details and/or Additional Services:</Form.Label>
+                                    <Form.Control 
+                                        style={{ fontFamily: 'Cuprum', height: '150px', resize: 'vertical' }} 
+                                        as="textarea" 
+                                        placeholder="Enter additional services or your message here" 
+                                        name="additional_services" 
+                                        autoComplete="off" 
+                                    />
                                 </Form.Group>
                             </Col>
                         </Row>
@@ -115,7 +120,7 @@ export const Estimate = () => {
                                     {isSubmitting ? (
                                         <span className="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
                                     ) : (
-                                        <span style={{ fontFamily: 'Cuprum', fontSize: '25px' }}>Send Quote Request</span>
+                                        <span style={{ fontFamily: 'Cuprum', fontSize: '25px' }}>Send Free Estimate Request</span>
                                     )}
                                 </Button>
                             </Col>
