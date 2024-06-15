@@ -53,17 +53,23 @@ export const ContactUs = () => {
     return (
         <div className="home-page" style={backgroundStyle}>
             <div className="mid-box">
-                <section id="contact-us" className="content">
+                <section id="contact" className="content">
                     <h1 className="mt-5" style={{ color: "white" }}>Contact Us</h1>
                     <p style={{ color: "lightgray" }}>Phone: (612) 208-7271</p>
                     <p style={{ color: "lightgray" }}>Email: info@aphomesvc.com</p>
                     <p style={{ color: "lightgray" }}>Use our contact form and we will get back to you shortly!</p>
                     <Form ref={form} onSubmit={sendEmail}>
                         <Row className="mb-4">
-                            <Col md={12}>
+                            <Col md={6}>
+                                <Form.Group controlId="name">
+                                    <Form.Label style={{ width: '100%', fontFamily: 'Cuprum', fontSize: '20px', color: "lightgray" }}>Your Name (required):</Form.Label>
+                                    <Form.Control style={{ fontFamily: 'Cuprum' }} type="text" placeholder="Name" name="user_name" required autoComplete="name" />
+                                </Form.Group>
+                            </Col>
+                            <Col md={6}>
                                 <Form.Group controlId="email">
                                     <Form.Label style={{ width: '100%', fontFamily: 'Cuprum', fontSize: '20px', color: "lightgray" }}>Your Email (required):</Form.Label>
-                                    <Form.Control style={{ fontFamily: 'Cuprum' }} type="email" placeholder="Your Email" name="user_email" required autoComplete="email" />
+                                    <Form.Control style={{ fontFamily: 'Cuprum' }} type="email" placeholder="Email" name="user_email" required autoComplete="email" />
                                 </Form.Group>
                             </Col>
                         </Row>
@@ -71,7 +77,7 @@ export const ContactUs = () => {
                             <Col md={12}>
                                 <Form.Group controlId="message">
                                     <Form.Label style={{ width: '100%', fontFamily: 'Cuprum', fontSize: '20px', color: "lightgray" }}>Your Message:</Form.Label>
-                                    <Form.Control style={{ fontFamily: 'Cuprum' }} as="textarea" rows={5} placeholder="Your Message" name="user_service_message" required />
+                                    <Form.Control style={{ fontFamily: 'Cuprum' }} as="textarea" rows={8} placeholder="Enter your message" name="user_service_message" required autoComplete="off" />
                                 </Form.Group>
                             </Col>
                         </Row>
