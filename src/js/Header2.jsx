@@ -18,7 +18,7 @@ const Header2 = () => {
                 <span>Call Us: 612-208-7271</span>
             </div>
             <NavLink to="/estimate" className="middle">
-                Click Here to Get A Free Quote
+                Click Here to Get A Free Estimate
             </NavLink>
             <div className="right">
                 <button 
