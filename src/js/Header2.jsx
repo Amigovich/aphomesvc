@@ -16,6 +16,11 @@ const Header2 = () => {
         <header className="header2">
             <div className="left">
                 <span>Call Us: 612-208-7271</span>
+            </div>
+            <NavLink to="/estimate" className="middle">
+                Click Here to Get A Free Quote
+            </NavLink>
+            <div className="right">
                 <button 
                     onClick={openGoogleCalendar} 
                     style={{
@@ -28,12 +33,9 @@ const Header2 = () => {
                         cursor: 'pointer'
                     }}
                 >
-                    Book Free Consultation
+                    Book a Free Consultation
                 </button>
             </div>
-            <NavLink to="/estimate" className="middle">
-                Click Here to Get A Free Quote
-            </NavLink>
         </header>
     );
 }
