@@ -120,8 +120,8 @@ const HomePage = () => {
                                 </Row>
                                 <Row>
                                     <Col xs={12}>
-                                        <Form.Group controlId="how">
-                                            <Form.Control style={{ fontFamily: 'Cuprum' }} as="textarea" rows="3" cols="48" placeholder="How Did You Hear About Us?" name="user_how" />
+                                        <Form.Group controlId="Need">
+                                            <Form.Control style={{ fontFamily: 'Cuprum' }} as="textarea" rows="3" cols="48" placeholder="Let us know what you need..." name="user_need" />
                                         </Form.Group>
                                     </Col>
                                 </Row>
