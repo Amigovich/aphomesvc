@@ -13,11 +13,6 @@ function Header() {
     setShowNavLinks(false);
   };
 
-  const handleToggleClick = () => {
-    setExpanded(!expanded);
-    setShowNavLinks(!expanded);
-  };
-
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth <= 992) {
@@ -46,11 +41,8 @@ function Header() {
             alt="AP Home Services Logo"
           />
         </Navbar.Brand>
-        <Navbar.Toggle
-          style={{ backgroundColor: 'gray' }}
-          aria-controls="responsive-navbar-nav"
-          onClick={handleToggleClick}
-        />
+
+
         <Navbar.Collapse id="responsive-navbar-nav">
           {showNavLinks && (
             <Nav className="ml-auto">
