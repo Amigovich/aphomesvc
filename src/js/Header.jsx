@@ -9,8 +9,8 @@ function Header() {
   const [showNavLinks, setShowNavLinks] = useState(true);
 
   const handleNavItemClick = () => {
-    setExpanded(false);
-    setShowNavLinks(false);
+    setExpanded(!expanded);
+    setShowNavLinks(!expanded);
   };
 
   useEffect(() => {
