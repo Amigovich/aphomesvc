@@ -47,7 +47,7 @@ function Header() {
           />
         </Navbar.Brand>
         <Navbar.Toggle
-          onClick={handleToggleClick}
+          onClick={handleNavItemClick}
         />
         <Navbar.Collapse id="responsive-navbar-nav">
           {showNavLinks && (
@@ -59,7 +59,7 @@ function Header() {
       </Navbar>
       {expanded && (
         <div className="side-menu">
-          <Button className="close-btn" onClick={handleToggleClick}>X</Button>
+          <Button className="close-btn" onClick={handleNavItemClick}>X</Button>
           <Nav className="flex-column">
             <Navigation onItemClick={handleNavItemClick} />
           </Nav>
