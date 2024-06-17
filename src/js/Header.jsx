@@ -8,6 +8,10 @@ function Header() {
   const [expanded, setExpanded] = useState(false);
   const [showNavLinks, setShowNavLinks] = useState(true);
 
+  const handleNavItemClick = () => {
+    setExpanded(false);
+    setShowNavLinks(false);
+  };
 
   const handleToggleClick = () => {
     setExpanded(!expanded);
@@ -42,11 +46,13 @@ function Header() {
             alt="AP Home Services Logo"
           />
         </Navbar.Brand>
-
+        <Navbar.Toggle
+          onClick={handleToggleClick}
+        />
         <Navbar.Collapse id="responsive-navbar-nav">
           {showNavLinks && (
             <Nav className="ml-auto">
-              <Navigation onItemClick={handleToggleClick} />
+              <Navigation onItemClick={handleNavItemClick} />
             </Nav>
           )}
         </Navbar.Collapse>
@@ -55,7 +61,7 @@ function Header() {
         <div className="side-menu">
           <Button className="close-btn" onClick={handleToggleClick}>X</Button>
           <Nav className="flex-column">
-            <Navigation onItemClick={handleToggleClick} />
+            <Navigation onItemClick={handleNavItemClick} />
           </Nav>
         </div>
       )}
