@@ -355,7 +355,7 @@ p {
 
 /* Footer styles */
 .footer {
-  position: relative;
+  position: fixed;
   background-color: #262b3d;
   font-size: 18px;
   padding: 0;
