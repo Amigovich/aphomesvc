@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import Navigation from './Navigation';
 import { Navbar, Nav, Button } from 'react-bootstrap';
 import logo from '/logo.png';
-import './Header.css';
+
 
 function Header() {
   const [expanded, setExpanded] = useState(false);
