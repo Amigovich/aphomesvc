@@ -4,13 +4,13 @@ import Navigation from './Navigation';
 import { Navbar, Nav, Button } from 'react-bootstrap';
 import logo from '/logo.png';
 
-
 function Header() {
   const [expanded, setExpanded] = useState(false);
   const [showNavLinks, setShowNavLinks] = useState(true);
 
   const handleNavItemClick = () => {
     setExpanded(false);
+    setShowNavLinks(false);
   };
 
   const handleToggleClick = () => {
