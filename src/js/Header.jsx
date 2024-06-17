@@ -8,7 +8,8 @@ function Header() {
   const [expanded, setExpanded] = useState(false);
   const [showNavLinks, setShowNavLinks] = useState(true);
 
-  const handleNavItemClick = () => {
+
+  const handleToggleClick = () => {
     setExpanded(!expanded);
     setShowNavLinks(!expanded);
   };
@@ -42,11 +43,10 @@ function Header() {
           />
         </Navbar.Brand>
 
-
         <Navbar.Collapse id="responsive-navbar-nav">
           {showNavLinks && (
             <Nav className="ml-auto">
-              <Navigation onItemClick={handleNavItemClick} />
+              <Navigation onItemClick={handleToggleClick} />
             </Nav>
           )}
         </Navbar.Collapse>
@@ -55,7 +55,7 @@ function Header() {
         <div className="side-menu">
           <Button className="close-btn" onClick={handleToggleClick}>X</Button>
           <Nav className="flex-column">
-            <Navigation onItemClick={handleNavItemClick} />
+            <Navigation onItemClick={handleToggleClick} />
           </Nav>
         </div>
       )}
