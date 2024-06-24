@@ -24,7 +24,7 @@ function Navigation({ onItemClick }) {
                 </Link>
             </Nav.Item>
             <Nav.Item>
-                <Link to="/brands" className={`parnav nav-link ${location.pathname === '/brands' ? 'active' : ''}`} onClick={handleItemClick}>
+                <Link to="/partners" className={`parnav nav-link ${location.pathname === '/parnters' ? 'active' : ''}`} onClick={handleItemClick}>
                     Preferred Brands
                     {location.pathname === '/partners' && <div className="active-line3"></div>}
                 </Link>
