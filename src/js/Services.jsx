@@ -29,18 +29,6 @@ const Services = () => {
           </Link>
         </Col>
       </Row>
-      <Row className="justify-content-center">
-        <Col md={6} lg={7} className="mb-3 mx-auto">
-          <Link to="/contracting" className="text-decoration-none">
-            <Card className="svc-card">
-              <Card.Body className="svc-card2">
-                <Card.Title className='h5stuff text-center' style= {{ color:"white" }}>General Contracting</Card.Title>
-                <Card.Text className='text-center' style= {{ color:"lightgray" }}>From minor repairs to major renovations, we offer comprehensive general contracting services to meet all your home improvement needs.</Card.Text>
-              </Card.Body>
-            </Card>
-          </Link>
-        </Col>
-      </Row>
     </Container>
   );
 };
