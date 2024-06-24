@@ -4,7 +4,7 @@ import { Row, Col } from 'react-bootstrap';
 const Partners = () => {
     return (
         <div className="partners-container">
-            <h1 className="text-center mt-5">Our Partners</h1>
+            <h1 className="text-center mt-5">Preferred Brands</h1>
             <Row className="justify-content-center align-items-center">
                 <Col xs={12} md={6} lg={4} className="partner-col1 mb-3">
                     <div className="partner d-flex flex-column align-items-center">
