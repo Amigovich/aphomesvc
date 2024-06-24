@@ -11,4 +11,4 @@ export { default as Reviews } from './Reviews';
 export { default as Footer } from './Footer';
 export { default as Windows } from './Windows';
 export { default as Doors } from './Doors';
-export { default as Contracting } from './Contracting';
+
