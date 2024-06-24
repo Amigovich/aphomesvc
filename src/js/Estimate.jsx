@@ -93,11 +93,7 @@ export const Estimate = () => {
                                     <Form.Control style={{ fontFamily: 'Cuprum' }} as="select" name="user_service_message" required autoComplete="off">
                                         <option value="">Select One</option>
                                         <option value="windows">Windows</option>
-                                        <option value="roofing">Roofing</option>
-                                        <option value="siding">Siding</option>
-                                        <option value="gutters">Gutters</option>
                                         <option value="doors">Doors</option>
-                                        <option value="general">General</option>
                                     </Form.Control>
                                 </Form.Group>
                             </Col>
