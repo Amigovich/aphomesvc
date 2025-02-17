@@ -42,24 +42,25 @@ function About() {
   return (
     <section id="about" className="about-content">
       <Container className='mt-5'>
-        <h1 className="text-center">About Us</h1>
-          <Row>
-              <Col xs={12} md={12} className="text-center">
-                    <p className="p1">
-                          Welcome to <strong>AP Home Services</strong>—your trusted local partner for <strong>window and door replacements</strong> in the Twin Cities Metro area. Since <strong>2021</strong>, we’ve been providing high-quality, energy-efficient solutions for homeowners looking to upgrade their windows and doors.
-                    </p>
-                    <p className="p2 mt-4">
-                          With over <strong>15 years of combined experience</strong>, we specialize in <strong>custom solutions</strong> tailored to your home’s needs, offering professional installation and excellent customer service.
-                    </p>
-                    <p className="p2 mt-4">
-                          We’re a small, dedicated team focused on delivering affordable, reliable, and professional service with a personal touch. Whether you need to replace old windows, improve energy efficiency, or enhance your home’s curb appeal, we’re here to help.
-                    </p>
-                      <p className="p2 mt-4">
-                      <strong>Our Promise</strong><br/>
-                       At <strong>AP Home Services</strong>, we treat your home like our own, ensuring top-notch quality and a stress-free experience from start to finish.
-                      </p>
-            </Col>
-        </Row>
+               <h1 className="text-center">About Us</h1>
+        <Row>
+          <Col xs={12} md={12} className="text-center">
+				<p className="p1">
+				  Welcome to <strong>AP Home Services</strong>—your trusted local partner for <strong>window and door replacements</strong> in the Twin Cities Metro area. Since <strong>2021</strong>, we’ve been providing high-quality, energy-efficient solutions for homeowners looking to upgrade their windows and doors.
+				</p>
+				<p className="p2 mt-4">
+				  With over <strong>15 years of combined experience</strong>, we specialize in <strong>custom solutions</strong> tailored to your home’s needs, offering professional installation and excellent customer service.
+				</p>
+				<p className="p2 mt-4">
+				  We’re a small, dedicated team focused on delivering affordable, reliable, and professional service with a personal touch. Whether you need to replace old windows, improve energy efficiency, or enhance your home’s curb appeal, we’re here to help.
+				</p>
+				<p className="p2 mt-4">
+				  <strong>Our Promise</strong><br/>
+				  At <strong>AP Home Services</strong>, we treat your home like our own, ensuring top-notch quality and a stress-free experience from start to finish.
+				</p>
+          </Col>
+          <Row className="mt-4 text-center">
+          <Col xs={12} md={12} className="abt-gal">
 
 
             <Carousel
