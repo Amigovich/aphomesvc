@@ -42,7 +42,7 @@ function About() {
   return (
     <section id="about" className="about-content">
       <Container className='mt-5'>
-                       <h1 className="text-center">About Us</h1>
+        <h1 className="text-center">About Us</h1>
         <Row>
           <Col xs={12} md={12} className="text-center">
             <p className="p1">
@@ -54,7 +54,6 @@ function About() {
           </Col>
           <Row className="mt-4 text-center">
           <Col xs={12} md={12} className="abt-gal">
-
             <Carousel
               activeIndex={activeIndex}
               onSelect={handleSlideChange}
@@ -91,7 +90,7 @@ function About() {
         </Row>
         <Row className="justify-content-center">
           <Col xs={12} md={12} className="text-center">
-            <Link to="/ContactUs" className="reviews-link2" style={{ fontSize:"30px", fontWeight:"bold" }}>Click Here to Contact Us!</Link>
+            <Link to="/estimate" className="reviews-link2" style={{ fontSize:"30px", fontWeight:"bold" }}>Click Here to Contact Us!</Link>
           </Col>
         </Row>
       </Container>
